@@ -286,7 +286,7 @@ This is a test project, but if you have suggestions or find issues, feel free to
 ## License
 
 This project is for demonstration purposes. 
-Note: The BlackBull branding, logo, and all associated visual assets are proprietary and owned by BlackBull. All rights reserved.
+
 
 ## Contact
 - Email: christian.isai@gmail.com

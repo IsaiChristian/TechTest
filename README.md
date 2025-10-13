@@ -33,35 +33,35 @@ Other things that I decided to practice while doing your test were:
 ## Home Screen
 | Loading States | Content View | Movie Detail |
 |:---:|:---:|:---:|
-| ![Initial Loading](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/home_loading_init.jpg) | ![Home](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/home.jpg) | ![Movie Detail](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/movie_detail.jpg) |
+| ![Initial Loading](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/home_loading_init.jpg) | ![Home](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/home.jpg) | ![Movie Detail](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/movie_detail.jpg) |
 | **Initial Loading** | **Home View** | **Movie Detail** |
 
 | Loading More | Non-Blocking Error |
 |:---:|:---:|
-| ![Loading More](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/home_loading_more.jpg) | ![Error State](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/home_not_blocking_error.jpg) |
+| ![Loading More](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/home_loading_more.jpg) | ![Error State](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/home_not_blocking_error.jpg) |
 | **Loading More Content** | **Non-Blocking Error** |
 
 ## Favorites
 | Empty State | With Content |
 |:---:|:---:|
-| ![Empty Favorites](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/favorites_empty.jpg) | ![Filled Favorites](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/favorites_filled.jpg) |
+| ![Empty Favorites](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/favorites_empty.jpg) | ![Filled Favorites](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/favorites_filled.jpg) |
 | **Empty Favorites** | **Favorites List** |
 
 ## Search
 | Default | Active Search | Error State |
 |:---:|:---:|:---:|
-| ![Search](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/search.jpg) | ![Search Active](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/search_active.jpg) | ![Search Error](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/search_query_error.jpg) |
+| ![Search](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/search.jpg) | ![Search Active](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/search_active.jpg) | ![Search Error](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/search_query_error.jpg) |
 | **Search Screen** | **Active Search** | **Search Query Error** |
 
 ## Error Handling
 | Blocking Error |
 |:---:|
-| ![Blocking Error](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/blocking_error.jpg) |
+| ![Blocking Error](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/blocking_error.jpg) |
 | **Blocking Error Screen** |
 
 ## Video Demo
 
-https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/main/screenshots/working_video.mp4
+https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/working_video.mp4
 
 ## Getting Started
 

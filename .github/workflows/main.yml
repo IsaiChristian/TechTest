@@ -1,0 +1,164 @@
+name: Flutter CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run Flutter Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      # Create .env file to avoid warnings
+      - name: Create .env file
+        run: |
+          mkdir -p secrets
+          echo "TMB_API=9182d61f6e2362696ccfd187efde4fa7" > secrets/.env
+          
+      # Cache Flutter SDK
+      - name: Cache Flutter SDK
+        uses: actions/cache@v4
+        with:
+          path: ~/.flutter
+          key: ${{ runner.os }}-flutter-3.35.5
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.35.5'
+          channel: 'stable'
+          cache: true
+
+      # Cache pub dependencies
+      - name: Cache Pub dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.pub-cache
+          key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pub-
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Run tests with coverage
+        run: flutter test --enable-experiment=dot-shorthands --coverage
+
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lcov.info
+          path: coverage/lcov.info
+
+  coverage_report:
+    name: Generate & Publish Coverage Report
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download coverage artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: lcov.info
+          path: coverage
+
+      - name: Setup LCOV
+        uses: hrishikesh-kadam/setup-lcov@v1
+
+      - name: Generate HTML report & extract stats
+        id: coverage
+        run: |
+          mkdir -p coverage/html
+          genhtml coverage/lcov.info --output-directory coverage/html > genhtml-summary.txt
+          cat genhtml-summary.txt
+          total_lines=$(grep "lines......:" genhtml-summary.txt | awk '{print $2}')
+          covered=$(grep "lines......:" genhtml-summary.txt | awk '{print $3}')
+          percent=$(grep "lines......:" genhtml-summary.txt | awk '{print $4}')
+          echo "total_lines=$total_lines" >> $GITHUB_OUTPUT
+          echo "covered=$covered" >> $GITHUB_OUTPUT
+          echo "percent=$percent" >> $GITHUB_OUTPUT
+
+      - name: Verify HTML generation
+        run: |
+          echo "=== Generated files in coverage/html ==="
+          ls -la coverage/html/
+
+      - name: Disable Jekyll and clean deployment
+        run: |
+          # Create .nojekyll to disable Jekyll processing
+          touch coverage/html/.nojekyll
+          # Remove any README.md that might be in the deployment dir
+          find coverage/html -name "README.md" -delete
+          echo "✅ Created .nojekyll file to disable Jekyll processing"
+
+      - name: Upload HTML coverage report (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-html
+          path: coverage/html
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: coverage/html
+          clean: true
+          clean-exclude: |
+            .nojekyll
+          single-commit: true
+
+      - name: Verify deployment files
+        run: |
+          echo "📋 Files that should be in gh-pages branch:"
+          echo "   - index.html (coverage report)"
+          echo "   - .nojekyll (disables Jekyll processing)"
+          echo "   - No README.md files"
+          echo ""
+          echo "🔗 Your coverage report URL:"
+          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+
+      - name: Report code coverage with summary
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: zgosalvez/github-actions-report-lcov@v4
+        with:
+          coverage-files: coverage/lcov.info
+          minimum-coverage: 90
+          artifact-name: code-coverage-report
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          update-comment: true
+          title-prefix: "📊 Code Coverage Report"
+          additional-message: |
+            ✅ Cobertura generada correctamente
+
+            **Resumen:**
+            - Líneas totales: ${{ steps.coverage.outputs.total_lines }}
+            - Cubiertas: ${{ steps.coverage.outputs.covered }}
+            - Cobertura global: ${{ steps.coverage.outputs.percent }}
+
+            🔗 [Ver reporte HTML completo](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/)
+
+      - name: Add coverage summary to job
+        run: |
+          echo "### 📊 Code Coverage Report" >> $GITHUB_STEP_SUMMARY
+          echo "**Resumen:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Líneas totales: ${{ steps.coverage.outputs.total_lines }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Cubiertas: ${{ steps.coverage.outputs.covered }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Cobertura global: ${{ steps.coverage.outputs.percent }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 [Ver reporte HTML completo](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/)" >> $GITHUB_STEP_SUMMARY

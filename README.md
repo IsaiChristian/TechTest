@@ -50,7 +50,7 @@ Other things that I decided to practice while doing your test were:
 ## Search
 | Default | Active Search | Error State |
 |:---:|:---:|:---:|
-| ![Search](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/search.jpg) | ![Search Active](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/search_active.jpg) | ![Search Error](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/search_query_error.jpg) |
+| ![Search](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/search_init.jpg) | ![Search Active](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/search_active.jpg) | ![Search Error](https://raw.githubusercontent.com/IsaiChristian/TechTest/refs/heads/master/screenshots/search_query_error.jpg) |
 | **Search Screen** | **Active Search** | **Search Query Error** |
 
 ## Error Handling

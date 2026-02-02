@@ -9,7 +9,8 @@ on:
 jobs:
   test:
     name: Run Flutter Tests
-    runs-on: ssdnodes-ediast
+    runs-on: self-hosted
+
 
     steps:
       - name: Checkout repository
@@ -62,7 +63,7 @@ jobs:
   coverage_report:
     name: Generate & Publish Coverage Report
     needs: test
-    runs-on: ssdnodes-ediast
+    runs-on: self-hosted
     permissions:
       contents: write
       pages: write

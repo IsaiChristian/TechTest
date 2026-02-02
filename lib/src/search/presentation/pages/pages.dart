@@ -81,7 +81,7 @@ class _SearchPageViewState extends State<SearchPageView> {
                                 ),
                                 onChanged: (query) {
                                   context.read<SearchBloc>().add(
-                                    SearchSubmitted(query),
+                                    SearchTextChanged(query),
                                   );
                                 },
                                 onSubmitted: (query) {

@@ -55,39 +55,33 @@ void main() {
   blocTest<SearchBloc, SearchState>(
     'emits [SearchLoading, SearchLoaded] when SearchSubmitted is added and repository returns results',
     build: () {
-      when(mockMovieRepository.searchMovies(query: 'query')).thenAnswer(
-        (_) async => Right(tSearchResponse),
-      );
+      when(
+        mockMovieRepository.searchMovies(query: 'query'),
+      ).thenAnswer((_) async => Right(tSearchResponse));
       return searchBloc;
     },
     act: (bloc) => bloc.add(const SearchSubmitted('query')),
-    expect: () => [
-      SearchLoading(),
-      SearchLoaded(tMovies),
-    ],
+    expect: () => [SearchLoading(), SearchLoaded(tMovies)],
   );
 
   blocTest<SearchBloc, SearchState>(
     'emits [SearchLoading, SearchInitial] when SearchSubmitted is added and repository returns empty results',
     build: () {
-      when(mockMovieRepository.searchMovies(query: 'empty')).thenAnswer(
-        (_) async => Right(tEmptySearchResponse),
-      );
+      when(
+        mockMovieRepository.searchMovies(query: 'empty'),
+      ).thenAnswer((_) async => Right(tEmptySearchResponse));
       return searchBloc;
     },
     act: (bloc) => bloc.add(const SearchSubmitted('empty')),
-    expect: () => [
-      SearchLoading(),
-      SearchInitial(),
-    ],
+    expect: () => [SearchLoading(), SearchInitial()],
   );
 
   blocTest<SearchBloc, SearchState>(
     'emits [SearchLoading, SearchError] when SearchSubmitted is added and repository returns failure',
     build: () {
-      when(mockMovieRepository.searchMovies(query: 'error')).thenAnswer(
-        (_) async => Left(ServerFailure('Error')),
-      );
+      when(
+        mockMovieRepository.searchMovies(query: 'error'),
+      ).thenAnswer((_) async => Left(ServerFailure('Error')));
       return searchBloc;
     },
     act: (bloc) => bloc.add(const SearchSubmitted('error')),

@@ -30,15 +30,18 @@ void main() {
       totalResults: 100,
     );
 
-    test('should map PopularMoviesResponseModel to PopularMoviesResponseEntity', () {
-      final result = tPopularMoviesModel.toEntity();
+    test(
+      'should map PopularMoviesResponseModel to PopularMoviesResponseEntity',
+      () {
+        final result = tPopularMoviesModel.toEntity();
 
-      expect(result, isA<PopularMoviesResponseEntity>());
-      expect(result.page, tPopularMoviesModel.page);
-      expect(result.totalPages, tPopularMoviesModel.totalPages);
-      expect(result.totalResults, tPopularMoviesModel.totalResults);
-      expect(result.results.length, 1);
-      expect(result.results.first.id, tMovieModel.id);
-    });
+        expect(result, isA<PopularMoviesResponseEntity>());
+        expect(result.page, tPopularMoviesModel.page);
+        expect(result.totalPages, tPopularMoviesModel.totalPages);
+        expect(result.totalResults, tPopularMoviesModel.totalResults);
+        expect(result.results.length, 1);
+        expect(result.results.first.id, tMovieModel.id);
+      },
+    );
   });
 }

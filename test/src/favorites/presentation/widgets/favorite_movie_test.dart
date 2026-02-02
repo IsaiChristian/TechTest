@@ -35,41 +35,71 @@ void main() {
   }
 
   group('FavoriteMovie', () {
-    testWidgets('shows favorite icon when movie is in favorites', (tester) async {
-      when(mockFavoritesBloc.state).thenReturn(FavoritesLoaded(favoriteMovies: [movie]));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(FavoritesLoaded(favoriteMovies: [movie])));
+    testWidgets('shows favorite icon when movie is in favorites', (
+      tester,
+    ) async {
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(FavoritesLoaded(favoriteMovies: [movie]));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(FavoritesLoaded(favoriteMovies: [movie])),
+      );
 
-      await tester.pumpWidget(createWidgetUnderMain(FavoriteMovie(movie: movie)));
+      await tester.pumpWidget(
+        createWidgetUnderMain(FavoriteMovie(movie: movie)),
+      );
 
       expect(find.byIcon(Icons.favorite), findsOneWidget);
       expect(find.byIcon(Icons.favorite_border), findsNothing);
     });
 
-    testWidgets('shows favorite_border icon when movie is not in favorites', (tester) async {
-      when(mockFavoritesBloc.state).thenReturn(const FavoritesLoaded(favoriteMovies: []));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])));
+    testWidgets('shows favorite_border icon when movie is not in favorites', (
+      tester,
+    ) async {
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(const FavoritesLoaded(favoriteMovies: []));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])),
+      );
 
-      await tester.pumpWidget(createWidgetUnderMain(FavoriteMovie(movie: movie)));
+      await tester.pumpWidget(
+        createWidgetUnderMain(FavoriteMovie(movie: movie)),
+      );
 
       expect(find.byIcon(Icons.favorite_border), findsOneWidget);
       expect(find.byIcon(Icons.favorite), findsNothing);
     });
 
     testWidgets('adds favorite when clicked and not favorite', (tester) async {
-      when(mockFavoritesBloc.state).thenReturn(const FavoritesLoaded(favoriteMovies: []));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])));
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(const FavoritesLoaded(favoriteMovies: []));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])),
+      );
 
-      await tester.pumpWidget(createWidgetUnderMain(FavoriteMovie(movie: movie)));
+      await tester.pumpWidget(
+        createWidgetUnderMain(FavoriteMovie(movie: movie)),
+      );
 
       await tester.tap(find.byType(FloatingActionButton));
       verify(mockFavoritesBloc.add(AddFavoriteMovie(movie))).called(1);
     });
 
-    testWidgets('removes favorite when clicked and is favorite', (tester) async {
-      when(mockFavoritesBloc.state).thenReturn(FavoritesLoaded(favoriteMovies: [movie]));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(FavoritesLoaded(favoriteMovies: [movie])));
+    testWidgets('removes favorite when clicked and is favorite', (
+      tester,
+    ) async {
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(FavoritesLoaded(favoriteMovies: [movie]));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(FavoritesLoaded(favoriteMovies: [movie])),
+      );
 
-      await tester.pumpWidget(createWidgetUnderMain(FavoriteMovie(movie: movie)));
+      await tester.pumpWidget(
+        createWidgetUnderMain(FavoriteMovie(movie: movie)),
+      );
 
       await tester.tap(find.byType(FloatingActionButton));
       verify(mockFavoritesBloc.add(RemoveFavoriteMovie(movie))).called(1);

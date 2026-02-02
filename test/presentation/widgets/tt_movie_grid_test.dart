@@ -25,12 +25,12 @@ void main() {
     ),
   ];
 
-  testWidgets('TtMovieGrid renders grid of movies', (WidgetTester tester) async {
+  testWidgets('TtMovieGrid renders grid of movies', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       MaterialApp(
-        home: Scaffold(
-          body: TtMovieGrid(movieList: tMovies),
-        ),
+        home: Scaffold(body: TtMovieGrid(movieList: tMovies)),
       ),
     );
 
@@ -42,9 +42,7 @@ void main() {
   testWidgets('TtMovieGrid handles empty list', (WidgetTester tester) async {
     await tester.pumpWidget(
       const MaterialApp(
-        home: Scaffold(
-          body: TtMovieGrid(movieList: []),
-        ),
+        home: Scaffold(body: TtMovieGrid(movieList: [])),
       ),
     );
 

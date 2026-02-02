@@ -9,7 +9,7 @@ void main() {
       'belongs_to_collection': null,
       'budget': 1000000,
       'genres': [
-        {'id': 1, 'name': 'Action'}
+        {'id': 1, 'name': 'Action'},
       ],
       'homepage': 'https://example.com',
       'id': 1,
@@ -24,17 +24,17 @@ void main() {
           'id': 1,
           'logo_path': '/logo.png',
           'name': 'Company',
-          'origin_country': 'US'
-        }
+          'origin_country': 'US',
+        },
       ],
       'production_countries': [
-        {'iso_3166_1': 'US', 'name': 'USA'}
+        {'iso_3166_1': 'US', 'name': 'USA'},
       ],
       'release_date': '2023-01-01',
       'revenue': 2000000,
       'runtime': 120,
       'spoken_languages': [
-        {'english_name': 'English', 'iso_639_1': 'en', 'name': 'English'}
+        {'english_name': 'English', 'iso_639_1': 'en', 'name': 'English'},
       ],
       'status': 'Released',
       'tagline': 'Tagline',
@@ -64,11 +64,9 @@ void main() {
           logoPath: '/logo.png',
           name: 'Company',
           originCountry: 'US',
-        )
+        ),
       ],
-      productionCountries: [
-        ProductionCountry(iso31661: 'US', name: 'USA'),
-      ],
+      productionCountries: [ProductionCountry(iso31661: 'US', name: 'USA')],
       releaseDate: '2023-01-01',
       revenue: 2000000,
       runtime: 120,

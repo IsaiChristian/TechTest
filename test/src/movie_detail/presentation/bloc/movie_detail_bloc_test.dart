@@ -42,24 +42,21 @@ void main() {
   blocTest<MovieDetailBloc, MovieDetailState>(
     'emits [MovieDetailLoading, MovieDetailLoaded] when MovieDetailInit is added and repository returns success',
     build: () {
-      when(mockMovieRepository.getMovie(id: tMovieId)).thenAnswer(
-        (_) async => Right(tMovie),
-      );
+      when(
+        mockMovieRepository.getMovie(id: tMovieId),
+      ).thenAnswer((_) async => Right(tMovie));
       return movieDetailBloc;
     },
     act: (bloc) => bloc.add(const MovieDetailInit()),
-    expect: () => [
-      MovieDetailLoading(),
-      MovieDetailLoaded(tMovie),
-    ],
+    expect: () => [MovieDetailLoading(), MovieDetailLoaded(tMovie)],
   );
 
   blocTest<MovieDetailBloc, MovieDetailState>(
     'emits [MovieDetailLoading, MovieDetailError] when MovieDetailInit is added and repository returns failure',
     build: () {
-      when(mockMovieRepository.getMovie(id: tMovieId)).thenAnswer(
-        (_) async => Left(ServerFailure('Error')),
-      );
+      when(
+        mockMovieRepository.getMovie(id: tMovieId),
+      ).thenAnswer((_) async => Left(ServerFailure('Error')));
       return movieDetailBloc;
     },
     act: (bloc) => bloc.add(const MovieDetailInit()),

@@ -33,7 +33,7 @@ class TtMovieGrid extends StatelessWidget {
           child: Card(
             elevation: 4,
             child: Column(
-              crossAxisAlignment: .stretch,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 
                 Expanded(

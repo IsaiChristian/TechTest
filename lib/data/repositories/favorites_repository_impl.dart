@@ -8,6 +8,7 @@ import 'package:dartz/dartz.dart';
 class FavoriteRepositoryImpl implements FavoriteRepository {
   final LocalStorageService _localStorage;
   static const String _keyFavoriteMovies = 'favorite_movies_list';
+  List<MovieEntity>? _cachedFavorites;
 
   FavoriteRepositoryImpl(this._localStorage);
 
@@ -25,6 +26,7 @@ class FavoriteRepositoryImpl implements FavoriteRepository {
             _keyFavoriteMovies,
             favorites,
           );
+          _cachedFavorites = favorites;
         }
         return;
       });
@@ -33,12 +35,17 @@ class FavoriteRepositoryImpl implements FavoriteRepository {
 
   @override
   Future<Either<Failure, List<MovieEntity>>> getFavoriteMovies() async {
-    return safeCall(
-      () => _localStorage.getJsonList<MovieEntity>(
+    if (_cachedFavorites != null) {
+      return Right(List.of(_cachedFavorites!));
+    }
+    return safeCall(() async {
+      final favorites = await _localStorage.getJsonList<MovieEntity>(
         _keyFavoriteMovies,
         MovieEntity.fromJson,
-      ),
-    );
+      );
+      _cachedFavorites = favorites;
+      return List.of(favorites);
+    });
   }
 
   @override
@@ -54,6 +61,7 @@ class FavoriteRepositoryImpl implements FavoriteRepository {
           _keyFavoriteMovies,
           favorites,
         );
+        _cachedFavorites = favorites;
         return;
       });
     });

@@ -36,7 +36,7 @@ void main() {
 
       final result = await repository.getFavoriteMovies();
 
-      expect(result, Right(tMovieList));
+      expect(result.fold((l) => [], (r) => r), equals(tMovieList));
       verify(
         mockLocalStorage.getJsonList<MovieEntity>(tKey, MovieEntity.fromJson),
       );

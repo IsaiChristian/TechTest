@@ -51,7 +51,7 @@ jobs:
         run: flutter analyze
 
       - name: Run tests with coverage
-        run: flutter test --enable-experiment=dot-shorthands --coverage
+        run: flutter test --coverage
 
       - name: Upload coverage artifact
         uses: actions/upload-artifact@v4

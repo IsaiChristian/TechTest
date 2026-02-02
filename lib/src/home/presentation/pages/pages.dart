@@ -78,7 +78,7 @@ class _HomePageViewState extends State<HomePageView> {
         key: ValueKey('home_scroll_view'),
         controller: _scrollController,
         child: Padding(
-          padding: const .all(24.0),
+          padding: const EdgeInsets.all(24.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -36,12 +36,12 @@ class MovieExplorer extends StatelessWidget {
                         if (state is! AppInitial) {
                           return MaterialApp(
                           
-                            themeMode: ThemeMode.dark,
-                            darkTheme: ThemeData(brightness: Brightness.dark),
+                            themeMode: .dark,
+                            darkTheme: ThemeData(brightness: .dark),
                             home: Scaffold(
                               body: Center(
                                 child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  mainAxisAlignment: .center,
                                   children: [
                                     SvgPicture.asset(
                                       'assets/images/tt_ico.svg',

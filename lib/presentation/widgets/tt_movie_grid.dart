@@ -53,7 +53,7 @@ class TtMovieGrid extends StatelessWidget {
                           child: CachedNetworkImage(
                             imageUrl: 'https://image.tmdb.org/t/p/w154${movieList[index].posterPath}',
                             fit: BoxFit.cover,
-                            placeholder: (context, url) => Center(child: TtLoadingLogo( duration: Duration(microseconds: 1500),),),
+                            placeholder: (context, url) => Center(child: TtLoadingLogo( duration: Duration(milliseconds: 1500),),),
                             errorWidget: (context, url, error) => Icon(Icons.error),
                           ),
                         ),

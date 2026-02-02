@@ -41,138 +41,73 @@ import 'package:tech_proof/src/search/presentation/bloc/search_bloc.dart'
 // ignore_for_file: subtype_of_sealed_class
 
 class _FakeDio_0 extends _i1.SmartFake implements _i2.Dio {
-  _FakeDio_0(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeDio_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeEither_1<L, R> extends _i1.SmartFake implements _i3.Either<L, R> {
-  _FakeEither_1(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeEither_1(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeFavoriteRepositoryImpl_2 extends _i1.SmartFake
     implements _i4.FavoriteRepositoryImpl {
-  _FakeFavoriteRepositoryImpl_2(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeFavoriteRepositoryImpl_2(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeFavoritesState_3 extends _i1.SmartFake
     implements _i5.FavoritesState {
-  _FakeFavoritesState_3(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeFavoritesState_3(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeMovieRepositoryImpl_4 extends _i1.SmartFake
     implements _i6.MovieRepositoryImpl {
-  _FakeMovieRepositoryImpl_4(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeMovieRepositoryImpl_4(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeHomeState_5 extends _i1.SmartFake implements _i7.HomeState {
-  _FakeHomeState_5(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeHomeState_5(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeSearchState_6 extends _i1.SmartFake implements _i8.SearchState {
-  _FakeSearchState_6(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeSearchState_6(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeMovieDetailState_7 extends _i1.SmartFake
     implements _i9.MovieDetailState {
-  _FakeMovieDetailState_7(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeMovieDetailState_7(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeBaseOptions_8 extends _i1.SmartFake implements _i2.BaseOptions {
-  _FakeBaseOptions_8(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeBaseOptions_8(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeHttpClientAdapter_9 extends _i1.SmartFake
     implements _i2.HttpClientAdapter {
-  _FakeHttpClientAdapter_9(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeHttpClientAdapter_9(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeTransformer_10 extends _i1.SmartFake implements _i2.Transformer {
-  _FakeTransformer_10(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeTransformer_10(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeInterceptors_11 extends _i1.SmartFake implements _i2.Interceptors {
-  _FakeInterceptors_11(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeInterceptors_11(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeResponse_12<T1> extends _i1.SmartFake implements _i2.Response<T1> {
-  _FakeResponse_12(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeResponse_12(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [LocalStorageService].
@@ -185,35 +120,24 @@ class MockLocalStorageService extends _i1.Mock
   }
 
   @override
-  _i11.Future<bool> setString(
-    String? key,
-    String? value,
-  ) =>
+  _i11.Future<bool> setString(String? key, String? value) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #setString,
-          [
-            key,
-            value,
-          ],
-        ),
-        returnValue: _i11.Future<bool>.value(false),
-      ) as _i11.Future<bool>);
+            Invocation.method(#setString, [key, value]),
+            returnValue: _i11.Future<bool>.value(false),
+          )
+          as _i11.Future<bool>);
 
   @override
-  String? getString(String? key) => (super.noSuchMethod(Invocation.method(
-        #getString,
-        [key],
-      )) as String?);
+  String? getString(String? key) =>
+      (super.noSuchMethod(Invocation.method(#getString, [key])) as String?);
 
   @override
-  _i11.Future<bool> remove(String? key) => (super.noSuchMethod(
-        Invocation.method(
-          #remove,
-          [key],
-        ),
-        returnValue: _i11.Future<bool>.value(false),
-      ) as _i11.Future<bool>);
+  _i11.Future<bool> remove(String? key) =>
+      (super.noSuchMethod(
+            Invocation.method(#remove, [key]),
+            returnValue: _i11.Future<bool>.value(false),
+          )
+          as _i11.Future<bool>);
 
   @override
   _i11.Future<bool> setJsonList<T extends _i10.JsonConvertible>(
@@ -221,15 +145,10 @@ class MockLocalStorageService extends _i1.Mock
     List<T>? list,
   ) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #setJsonList,
-          [
-            key,
-            list,
-          ],
-        ),
-        returnValue: _i11.Future<bool>.value(false),
-      ) as _i11.Future<bool>);
+            Invocation.method(#setJsonList, [key, list]),
+            returnValue: _i11.Future<bool>.value(false),
+          )
+          as _i11.Future<bool>);
 
   @override
   _i11.Future<List<T>> getJsonList<T extends _i10.JsonConvertible>(
@@ -237,15 +156,10 @@ class MockLocalStorageService extends _i1.Mock
     _i10.FromJsonFactory<T>? fromJson,
   ) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #getJsonList,
-          [
-            key,
-            fromJson,
-          ],
-        ),
-        returnValue: _i11.Future<List<T>>.value(<T>[]),
-      ) as _i11.Future<List<T>>);
+            Invocation.method(#getJsonList, [key, fromJson]),
+            returnValue: _i11.Future<List<T>>.value(<T>[]),
+          )
+          as _i11.Future<List<T>>);
 }
 
 /// A class which mocks [MovieRepositoryImpl].
@@ -258,86 +172,67 @@ class MockMovieRepositoryImpl extends _i1.Mock
   }
 
   @override
-  _i2.Dio get dio => (super.noSuchMethod(
-        Invocation.getter(#dio),
-        returnValue: _FakeDio_0(
-          this,
-          Invocation.getter(#dio),
-        ),
-      ) as _i2.Dio);
+  _i2.Dio get dio =>
+      (super.noSuchMethod(
+            Invocation.getter(#dio),
+            returnValue: _FakeDio_0(this, Invocation.getter(#dio)),
+          )
+          as _i2.Dio);
 
   @override
   _i11.Future<_i3.Either<_i12.Failure, _i13.PopularMoviesResponseEntity>>
-      getPopularMovies({int? page = 1}) => (super.noSuchMethod(
-            Invocation.method(
-              #getPopularMovies,
-              [],
-              {#page: page},
-            ),
-            returnValue: _i11.Future<
-                    _i3.Either<_i12.Failure,
-                        _i13.PopularMoviesResponseEntity>>.value(
-                _FakeEither_1<_i12.Failure, _i13.PopularMoviesResponseEntity>(
-              this,
-              Invocation.method(
-                #getPopularMovies,
-                [],
-                {#page: page},
-              ),
-            )),
-          ) as _i11.Future<
-              _i3.Either<_i12.Failure, _i13.PopularMoviesResponseEntity>>);
+  getPopularMovies({int? page = 1}) =>
+      (super.noSuchMethod(
+            Invocation.method(#getPopularMovies, [], {#page: page}),
+            returnValue:
+                _i11.Future<
+                  _i3.Either<_i12.Failure, _i13.PopularMoviesResponseEntity>
+                >.value(
+                  _FakeEither_1<_i12.Failure, _i13.PopularMoviesResponseEntity>(
+                    this,
+                    Invocation.method(#getPopularMovies, [], {#page: page}),
+                  ),
+                ),
+          )
+          as _i11.Future<
+            _i3.Either<_i12.Failure, _i13.PopularMoviesResponseEntity>
+          >);
 
   @override
-  _i11.Future<
-      _i3.Either<_i12.Failure, _i14.SearchResponseEntity>> searchMovies({
-    required String? query,
-    int? page = 1,
+  _i11.Future<_i3.Either<_i12.Failure, _i14.SearchResponseEntity>>
+  searchMovies({required String? query, int? page = 1}) =>
+      (super.noSuchMethod(
+            Invocation.method(#searchMovies, [], {#query: query, #page: page}),
+            returnValue:
+                _i11.Future<
+                  _i3.Either<_i12.Failure, _i14.SearchResponseEntity>
+                >.value(
+                  _FakeEither_1<_i12.Failure, _i14.SearchResponseEntity>(
+                    this,
+                    Invocation.method(#searchMovies, [], {
+                      #query: query,
+                      #page: page,
+                    }),
+                  ),
+                ),
+          )
+          as _i11.Future<_i3.Either<_i12.Failure, _i14.SearchResponseEntity>>);
+
+  @override
+  _i11.Future<_i3.Either<_i12.Failure, _i15.MovieEntity>> getMovie({
+    required int? id,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #searchMovies,
-          [],
-          {
-            #query: query,
-            #page: page,
-          },
-        ),
-        returnValue: _i11
-            .Future<_i3.Either<_i12.Failure, _i14.SearchResponseEntity>>.value(
-            _FakeEither_1<_i12.Failure, _i14.SearchResponseEntity>(
-          this,
-          Invocation.method(
-            #searchMovies,
-            [],
-            {
-              #query: query,
-              #page: page,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i3.Either<_i12.Failure, _i14.SearchResponseEntity>>);
-
-  @override
-  _i11.Future<_i3.Either<_i12.Failure, _i15.MovieEntity>> getMovie(
-          {required int? id}) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #getMovie,
-          [],
-          {#id: id},
-        ),
-        returnValue:
-            _i11.Future<_i3.Either<_i12.Failure, _i15.MovieEntity>>.value(
-                _FakeEither_1<_i12.Failure, _i15.MovieEntity>(
-          this,
-          Invocation.method(
-            #getMovie,
-            [],
-            {#id: id},
-          ),
-        )),
-      ) as _i11.Future<_i3.Either<_i12.Failure, _i15.MovieEntity>>);
+            Invocation.method(#getMovie, [], {#id: id}),
+            returnValue:
+                _i11.Future<_i3.Either<_i12.Failure, _i15.MovieEntity>>.value(
+                  _FakeEither_1<_i12.Failure, _i15.MovieEntity>(
+                    this,
+                    Invocation.method(#getMovie, [], {#id: id}),
+                  ),
+                ),
+          )
+          as _i11.Future<_i3.Either<_i12.Failure, _i15.MovieEntity>>);
 }
 
 /// A class which mocks [FavoriteRepositoryImpl].
@@ -351,74 +246,63 @@ class MockFavoriteRepositoryImpl extends _i1.Mock
 
   @override
   _i11.Future<_i3.Either<_i12.Failure, void>> addMovieToFavorites(
-          _i15.MovieEntity? movie) =>
+    _i15.MovieEntity? movie,
+  ) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #addMovieToFavorites,
-          [movie],
-        ),
-        returnValue: _i11.Future<_i3.Either<_i12.Failure, void>>.value(
-            _FakeEither_1<_i12.Failure, void>(
-          this,
-          Invocation.method(
-            #addMovieToFavorites,
-            [movie],
-          ),
-        )),
-      ) as _i11.Future<_i3.Either<_i12.Failure, void>>);
+            Invocation.method(#addMovieToFavorites, [movie]),
+            returnValue: _i11.Future<_i3.Either<_i12.Failure, void>>.value(
+              _FakeEither_1<_i12.Failure, void>(
+                this,
+                Invocation.method(#addMovieToFavorites, [movie]),
+              ),
+            ),
+          )
+          as _i11.Future<_i3.Either<_i12.Failure, void>>);
 
   @override
   _i11.Future<_i3.Either<_i12.Failure, List<_i15.MovieEntity>>>
-      getFavoriteMovies() => (super.noSuchMethod(
-            Invocation.method(
-              #getFavoriteMovies,
-              [],
-            ),
-            returnValue: _i11
-                .Future<_i3.Either<_i12.Failure, List<_i15.MovieEntity>>>.value(
-                _FakeEither_1<_i12.Failure, List<_i15.MovieEntity>>(
-              this,
-              Invocation.method(
-                #getFavoriteMovies,
-                [],
-              ),
-            )),
-          ) as _i11.Future<_i3.Either<_i12.Failure, List<_i15.MovieEntity>>>);
+  getFavoriteMovies() =>
+      (super.noSuchMethod(
+            Invocation.method(#getFavoriteMovies, []),
+            returnValue:
+                _i11.Future<
+                  _i3.Either<_i12.Failure, List<_i15.MovieEntity>>
+                >.value(
+                  _FakeEither_1<_i12.Failure, List<_i15.MovieEntity>>(
+                    this,
+                    Invocation.method(#getFavoriteMovies, []),
+                  ),
+                ),
+          )
+          as _i11.Future<_i3.Either<_i12.Failure, List<_i15.MovieEntity>>>);
 
   @override
   _i11.Future<_i3.Either<_i12.Failure, void>> removeMovieFromFavorites(
-          int? movieId) =>
+    int? movieId,
+  ) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #removeMovieFromFavorites,
-          [movieId],
-        ),
-        returnValue: _i11.Future<_i3.Either<_i12.Failure, void>>.value(
-            _FakeEither_1<_i12.Failure, void>(
-          this,
-          Invocation.method(
-            #removeMovieFromFavorites,
-            [movieId],
-          ),
-        )),
-      ) as _i11.Future<_i3.Either<_i12.Failure, void>>);
+            Invocation.method(#removeMovieFromFavorites, [movieId]),
+            returnValue: _i11.Future<_i3.Either<_i12.Failure, void>>.value(
+              _FakeEither_1<_i12.Failure, void>(
+                this,
+                Invocation.method(#removeMovieFromFavorites, [movieId]),
+              ),
+            ),
+          )
+          as _i11.Future<_i3.Either<_i12.Failure, void>>);
 
   @override
   _i11.Future<_i3.Either<_i12.Failure, bool>> isFavoriteMovie(int? movieId) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #isFavoriteMovie,
-          [movieId],
-        ),
-        returnValue: _i11.Future<_i3.Either<_i12.Failure, bool>>.value(
-            _FakeEither_1<_i12.Failure, bool>(
-          this,
-          Invocation.method(
-            #isFavoriteMovie,
-            [movieId],
-          ),
-        )),
-      ) as _i11.Future<_i3.Either<_i12.Failure, bool>>);
+            Invocation.method(#isFavoriteMovie, [movieId]),
+            returnValue: _i11.Future<_i3.Either<_i12.Failure, bool>>.value(
+              _FakeEither_1<_i12.Failure, bool>(
+                this,
+                Invocation.method(#isFavoriteMovie, [movieId]),
+              ),
+            ),
+          )
+          as _i11.Future<_i3.Either<_i12.Failure, bool>>);
 }
 
 /// A class which mocks [AppBloc].
@@ -430,146 +314,97 @@ class MockAppBloc extends _i1.Mock implements _i16.AppBloc {
   }
 
   @override
-  _i16.AppState get state => (super.noSuchMethod(
-        Invocation.getter(#state),
-        returnValue: _i17.dummyValue<_i16.AppState>(
-          this,
-          Invocation.getter(#state),
-        ),
-      ) as _i16.AppState);
+  _i16.AppState get state =>
+      (super.noSuchMethod(
+            Invocation.getter(#state),
+            returnValue: _i17.dummyValue<_i16.AppState>(
+              this,
+              Invocation.getter(#state),
+            ),
+          )
+          as _i16.AppState);
 
   @override
-  _i11.Stream<_i16.AppState> get stream => (super.noSuchMethod(
-        Invocation.getter(#stream),
-        returnValue: _i11.Stream<_i16.AppState>.empty(),
-      ) as _i11.Stream<_i16.AppState>);
+  _i11.Stream<_i16.AppState> get stream =>
+      (super.noSuchMethod(
+            Invocation.getter(#stream),
+            returnValue: _i11.Stream<_i16.AppState>.empty(),
+          )
+          as _i11.Stream<_i16.AppState>);
 
   @override
-  bool get isClosed => (super.noSuchMethod(
-        Invocation.getter(#isClosed),
-        returnValue: false,
-      ) as bool);
+  bool get isClosed =>
+      (super.noSuchMethod(Invocation.getter(#isClosed), returnValue: false)
+          as bool);
 
   @override
-  _i11.Future<void> close() => (super.noSuchMethod(
-        Invocation.method(
-          #close,
-          [],
-        ),
-        returnValue: _i11.Future<void>.value(),
-        returnValueForMissingStub: _i11.Future<void>.value(),
-      ) as _i11.Future<void>);
+  _i11.Future<void> close() =>
+      (super.noSuchMethod(
+            Invocation.method(#close, []),
+            returnValue: _i11.Future<void>.value(),
+            returnValueForMissingStub: _i11.Future<void>.value(),
+          )
+          as _i11.Future<void>);
 
   @override
   void add(_i16.AppEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #add,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#add, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onEvent(_i16.AppEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #onEvent,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#onEvent, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void emit(_i16.AppState? state) => super.noSuchMethod(
-        Invocation.method(
-          #emit,
-          [state],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#emit, [state]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void on<E extends _i16.AppEvent>(
     _i18.EventHandler<E, _i16.AppState>? handler, {
     _i18.EventTransformer<E>? transformer,
-  }) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #on,
-          [handler],
-          {#transformer: transformer},
-        ),
-        returnValueForMissingStub: null,
-      );
+  }) => super.noSuchMethod(
+    Invocation.method(#on, [handler], {#transformer: transformer}),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onTransition(
-          _i18.Transition<_i16.AppEvent, _i16.AppState>? transition) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onTransition,
-          [transition],
-        ),
-        returnValueForMissingStub: null,
-      );
+    _i18.Transition<_i16.AppEvent, _i16.AppState>? transition,
+  ) => super.noSuchMethod(
+    Invocation.method(#onTransition, [transition]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void onDone(
-    _i16.AppEvent? event, [
-    Object? error,
-    StackTrace? stackTrace,
-  ]) =>
+  void onDone(_i16.AppEvent? event, [Object? error, StackTrace? stackTrace]) =>
       super.noSuchMethod(
-        Invocation.method(
-          #onDone,
-          [
-            event,
-            error,
-            stackTrace,
-          ],
-        ),
+        Invocation.method(#onDone, [event, error, stackTrace]),
         returnValueForMissingStub: null,
       );
 
   @override
   void onChange(_i18.Change<_i16.AppState>? change) => super.noSuchMethod(
-        Invocation.method(
-          #onChange,
-          [change],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#onChange, [change]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void addError(
-    Object? error, [
-    StackTrace? stackTrace,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #addError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void addError(Object? error, [StackTrace? stackTrace]) => super.noSuchMethod(
+    Invocation.method(#addError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void onError(
-    Object? error,
-    StackTrace? stackTrace,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void onError(Object? error, StackTrace? stackTrace) => super.noSuchMethod(
+    Invocation.method(#onError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [FavoritesBloc].
@@ -581,156 +416,108 @@ class MockFavoritesBloc extends _i1.Mock implements _i5.FavoritesBloc {
   }
 
   @override
-  _i4.FavoriteRepositoryImpl get favoriteRepositoryImpl => (super.noSuchMethod(
-        Invocation.getter(#favoriteRepositoryImpl),
-        returnValue: _FakeFavoriteRepositoryImpl_2(
-          this,
-          Invocation.getter(#favoriteRepositoryImpl),
-        ),
-      ) as _i4.FavoriteRepositoryImpl);
+  _i4.FavoriteRepositoryImpl get favoriteRepositoryImpl =>
+      (super.noSuchMethod(
+            Invocation.getter(#favoriteRepositoryImpl),
+            returnValue: _FakeFavoriteRepositoryImpl_2(
+              this,
+              Invocation.getter(#favoriteRepositoryImpl),
+            ),
+          )
+          as _i4.FavoriteRepositoryImpl);
 
   @override
-  _i5.FavoritesState get state => (super.noSuchMethod(
-        Invocation.getter(#state),
-        returnValue: _FakeFavoritesState_3(
-          this,
-          Invocation.getter(#state),
-        ),
-      ) as _i5.FavoritesState);
+  _i5.FavoritesState get state =>
+      (super.noSuchMethod(
+            Invocation.getter(#state),
+            returnValue: _FakeFavoritesState_3(this, Invocation.getter(#state)),
+          )
+          as _i5.FavoritesState);
 
   @override
-  _i11.Stream<_i5.FavoritesState> get stream => (super.noSuchMethod(
-        Invocation.getter(#stream),
-        returnValue: _i11.Stream<_i5.FavoritesState>.empty(),
-      ) as _i11.Stream<_i5.FavoritesState>);
+  _i11.Stream<_i5.FavoritesState> get stream =>
+      (super.noSuchMethod(
+            Invocation.getter(#stream),
+            returnValue: _i11.Stream<_i5.FavoritesState>.empty(),
+          )
+          as _i11.Stream<_i5.FavoritesState>);
 
   @override
-  bool get isClosed => (super.noSuchMethod(
-        Invocation.getter(#isClosed),
-        returnValue: false,
-      ) as bool);
+  bool get isClosed =>
+      (super.noSuchMethod(Invocation.getter(#isClosed), returnValue: false)
+          as bool);
 
   @override
   void add(_i5.FavoritesEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #add,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#add, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onEvent(_i5.FavoritesEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #onEvent,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#onEvent, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void emit(_i5.FavoritesState? state) => super.noSuchMethod(
-        Invocation.method(
-          #emit,
-          [state],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#emit, [state]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void on<E extends _i5.FavoritesEvent>(
     _i18.EventHandler<E, _i5.FavoritesState>? handler, {
     _i18.EventTransformer<E>? transformer,
-  }) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #on,
-          [handler],
-          {#transformer: transformer},
-        ),
-        returnValueForMissingStub: null,
-      );
+  }) => super.noSuchMethod(
+    Invocation.method(#on, [handler], {#transformer: transformer}),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onTransition(
-          _i18.Transition<_i5.FavoritesEvent, _i5.FavoritesState>?
-              transition) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onTransition,
-          [transition],
-        ),
-        returnValueForMissingStub: null,
-      );
+    _i18.Transition<_i5.FavoritesEvent, _i5.FavoritesState>? transition,
+  ) => super.noSuchMethod(
+    Invocation.method(#onTransition, [transition]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onDone(
     _i5.FavoritesEvent? event, [
     Object? error,
     StackTrace? stackTrace,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onDone,
-          [
-            event,
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  ]) => super.noSuchMethod(
+    Invocation.method(#onDone, [event, error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  _i11.Future<void> close() => (super.noSuchMethod(
-        Invocation.method(
-          #close,
-          [],
-        ),
-        returnValue: _i11.Future<void>.value(),
-        returnValueForMissingStub: _i11.Future<void>.value(),
-      ) as _i11.Future<void>);
+  _i11.Future<void> close() =>
+      (super.noSuchMethod(
+            Invocation.method(#close, []),
+            returnValue: _i11.Future<void>.value(),
+            returnValueForMissingStub: _i11.Future<void>.value(),
+          )
+          as _i11.Future<void>);
 
   @override
   void onChange(_i18.Change<_i5.FavoritesState>? change) => super.noSuchMethod(
-        Invocation.method(
-          #onChange,
-          [change],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#onChange, [change]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void addError(
-    Object? error, [
-    StackTrace? stackTrace,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #addError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void addError(Object? error, [StackTrace? stackTrace]) => super.noSuchMethod(
+    Invocation.method(#addError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void onError(
-    Object? error,
-    StackTrace? stackTrace,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void onError(Object? error, StackTrace? stackTrace) => super.noSuchMethod(
+    Invocation.method(#onError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [HomeBloc].
@@ -742,155 +529,105 @@ class MockHomeBloc extends _i1.Mock implements _i7.HomeBloc {
   }
 
   @override
-  _i6.MovieRepositoryImpl get movieRepository => (super.noSuchMethod(
-        Invocation.getter(#movieRepository),
-        returnValue: _FakeMovieRepositoryImpl_4(
-          this,
-          Invocation.getter(#movieRepository),
-        ),
-      ) as _i6.MovieRepositoryImpl);
+  _i6.MovieRepositoryImpl get movieRepository =>
+      (super.noSuchMethod(
+            Invocation.getter(#movieRepository),
+            returnValue: _FakeMovieRepositoryImpl_4(
+              this,
+              Invocation.getter(#movieRepository),
+            ),
+          )
+          as _i6.MovieRepositoryImpl);
 
   @override
-  _i7.HomeState get state => (super.noSuchMethod(
-        Invocation.getter(#state),
-        returnValue: _FakeHomeState_5(
-          this,
-          Invocation.getter(#state),
-        ),
-      ) as _i7.HomeState);
+  _i7.HomeState get state =>
+      (super.noSuchMethod(
+            Invocation.getter(#state),
+            returnValue: _FakeHomeState_5(this, Invocation.getter(#state)),
+          )
+          as _i7.HomeState);
 
   @override
-  _i11.Stream<_i7.HomeState> get stream => (super.noSuchMethod(
-        Invocation.getter(#stream),
-        returnValue: _i11.Stream<_i7.HomeState>.empty(),
-      ) as _i11.Stream<_i7.HomeState>);
+  _i11.Stream<_i7.HomeState> get stream =>
+      (super.noSuchMethod(
+            Invocation.getter(#stream),
+            returnValue: _i11.Stream<_i7.HomeState>.empty(),
+          )
+          as _i11.Stream<_i7.HomeState>);
 
   @override
-  bool get isClosed => (super.noSuchMethod(
-        Invocation.getter(#isClosed),
-        returnValue: false,
-      ) as bool);
+  bool get isClosed =>
+      (super.noSuchMethod(Invocation.getter(#isClosed), returnValue: false)
+          as bool);
 
   @override
   void add(_i7.HomeEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #add,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#add, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onEvent(_i7.HomeEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #onEvent,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#onEvent, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void emit(_i7.HomeState? state) => super.noSuchMethod(
-        Invocation.method(
-          #emit,
-          [state],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#emit, [state]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void on<E extends _i7.HomeEvent>(
     _i18.EventHandler<E, _i7.HomeState>? handler, {
     _i18.EventTransformer<E>? transformer,
-  }) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #on,
-          [handler],
-          {#transformer: transformer},
-        ),
-        returnValueForMissingStub: null,
-      );
+  }) => super.noSuchMethod(
+    Invocation.method(#on, [handler], {#transformer: transformer}),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onTransition(
-          _i18.Transition<_i7.HomeEvent, _i7.HomeState>? transition) =>
+    _i18.Transition<_i7.HomeEvent, _i7.HomeState>? transition,
+  ) => super.noSuchMethod(
+    Invocation.method(#onTransition, [transition]),
+    returnValueForMissingStub: null,
+  );
+
+  @override
+  void onDone(_i7.HomeEvent? event, [Object? error, StackTrace? stackTrace]) =>
       super.noSuchMethod(
-        Invocation.method(
-          #onTransition,
-          [transition],
-        ),
+        Invocation.method(#onDone, [event, error, stackTrace]),
         returnValueForMissingStub: null,
       );
 
   @override
-  void onDone(
-    _i7.HomeEvent? event, [
-    Object? error,
-    StackTrace? stackTrace,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onDone,
-          [
-            event,
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
-
-  @override
-  _i11.Future<void> close() => (super.noSuchMethod(
-        Invocation.method(
-          #close,
-          [],
-        ),
-        returnValue: _i11.Future<void>.value(),
-        returnValueForMissingStub: _i11.Future<void>.value(),
-      ) as _i11.Future<void>);
+  _i11.Future<void> close() =>
+      (super.noSuchMethod(
+            Invocation.method(#close, []),
+            returnValue: _i11.Future<void>.value(),
+            returnValueForMissingStub: _i11.Future<void>.value(),
+          )
+          as _i11.Future<void>);
 
   @override
   void onChange(_i18.Change<_i7.HomeState>? change) => super.noSuchMethod(
-        Invocation.method(
-          #onChange,
-          [change],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#onChange, [change]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void addError(
-    Object? error, [
-    StackTrace? stackTrace,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #addError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void addError(Object? error, [StackTrace? stackTrace]) => super.noSuchMethod(
+    Invocation.method(#addError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void onError(
-    Object? error,
-    StackTrace? stackTrace,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void onError(Object? error, StackTrace? stackTrace) => super.noSuchMethod(
+    Invocation.method(#onError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [SearchBloc].
@@ -902,155 +639,108 @@ class MockSearchBloc extends _i1.Mock implements _i8.SearchBloc {
   }
 
   @override
-  _i6.MovieRepositoryImpl get movieRepository => (super.noSuchMethod(
-        Invocation.getter(#movieRepository),
-        returnValue: _FakeMovieRepositoryImpl_4(
-          this,
-          Invocation.getter(#movieRepository),
-        ),
-      ) as _i6.MovieRepositoryImpl);
+  _i6.MovieRepositoryImpl get movieRepository =>
+      (super.noSuchMethod(
+            Invocation.getter(#movieRepository),
+            returnValue: _FakeMovieRepositoryImpl_4(
+              this,
+              Invocation.getter(#movieRepository),
+            ),
+          )
+          as _i6.MovieRepositoryImpl);
 
   @override
-  _i8.SearchState get state => (super.noSuchMethod(
-        Invocation.getter(#state),
-        returnValue: _FakeSearchState_6(
-          this,
-          Invocation.getter(#state),
-        ),
-      ) as _i8.SearchState);
+  _i8.SearchState get state =>
+      (super.noSuchMethod(
+            Invocation.getter(#state),
+            returnValue: _FakeSearchState_6(this, Invocation.getter(#state)),
+          )
+          as _i8.SearchState);
 
   @override
-  _i11.Stream<_i8.SearchState> get stream => (super.noSuchMethod(
-        Invocation.getter(#stream),
-        returnValue: _i11.Stream<_i8.SearchState>.empty(),
-      ) as _i11.Stream<_i8.SearchState>);
+  _i11.Stream<_i8.SearchState> get stream =>
+      (super.noSuchMethod(
+            Invocation.getter(#stream),
+            returnValue: _i11.Stream<_i8.SearchState>.empty(),
+          )
+          as _i11.Stream<_i8.SearchState>);
 
   @override
-  bool get isClosed => (super.noSuchMethod(
-        Invocation.getter(#isClosed),
-        returnValue: false,
-      ) as bool);
+  bool get isClosed =>
+      (super.noSuchMethod(Invocation.getter(#isClosed), returnValue: false)
+          as bool);
 
   @override
   void add(_i8.SearchEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #add,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#add, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onEvent(_i8.SearchEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #onEvent,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#onEvent, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void emit(_i8.SearchState? state) => super.noSuchMethod(
-        Invocation.method(
-          #emit,
-          [state],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#emit, [state]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void on<E extends _i8.SearchEvent>(
     _i18.EventHandler<E, _i8.SearchState>? handler, {
     _i18.EventTransformer<E>? transformer,
-  }) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #on,
-          [handler],
-          {#transformer: transformer},
-        ),
-        returnValueForMissingStub: null,
-      );
+  }) => super.noSuchMethod(
+    Invocation.method(#on, [handler], {#transformer: transformer}),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onTransition(
-          _i18.Transition<_i8.SearchEvent, _i8.SearchState>? transition) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onTransition,
-          [transition],
-        ),
-        returnValueForMissingStub: null,
-      );
+    _i18.Transition<_i8.SearchEvent, _i8.SearchState>? transition,
+  ) => super.noSuchMethod(
+    Invocation.method(#onTransition, [transition]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onDone(
     _i8.SearchEvent? event, [
     Object? error,
     StackTrace? stackTrace,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onDone,
-          [
-            event,
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  ]) => super.noSuchMethod(
+    Invocation.method(#onDone, [event, error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  _i11.Future<void> close() => (super.noSuchMethod(
-        Invocation.method(
-          #close,
-          [],
-        ),
-        returnValue: _i11.Future<void>.value(),
-        returnValueForMissingStub: _i11.Future<void>.value(),
-      ) as _i11.Future<void>);
+  _i11.Future<void> close() =>
+      (super.noSuchMethod(
+            Invocation.method(#close, []),
+            returnValue: _i11.Future<void>.value(),
+            returnValueForMissingStub: _i11.Future<void>.value(),
+          )
+          as _i11.Future<void>);
 
   @override
   void onChange(_i18.Change<_i8.SearchState>? change) => super.noSuchMethod(
-        Invocation.method(
-          #onChange,
-          [change],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#onChange, [change]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void addError(
-    Object? error, [
-    StackTrace? stackTrace,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #addError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void addError(Object? error, [StackTrace? stackTrace]) => super.noSuchMethod(
+    Invocation.method(#addError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void onError(
-    Object? error,
-    StackTrace? stackTrace,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void onError(Object? error, StackTrace? stackTrace) => super.noSuchMethod(
+    Invocation.method(#onError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [MovieDetailBloc].
@@ -1062,163 +752,116 @@ class MockMovieDetailBloc extends _i1.Mock implements _i9.MovieDetailBloc {
   }
 
   @override
-  _i6.MovieRepositoryImpl get movieRepository => (super.noSuchMethod(
-        Invocation.getter(#movieRepository),
-        returnValue: _FakeMovieRepositoryImpl_4(
-          this,
-          Invocation.getter(#movieRepository),
-        ),
-      ) as _i6.MovieRepositoryImpl);
+  _i6.MovieRepositoryImpl get movieRepository =>
+      (super.noSuchMethod(
+            Invocation.getter(#movieRepository),
+            returnValue: _FakeMovieRepositoryImpl_4(
+              this,
+              Invocation.getter(#movieRepository),
+            ),
+          )
+          as _i6.MovieRepositoryImpl);
 
   @override
-  int get movieId => (super.noSuchMethod(
-        Invocation.getter(#movieId),
-        returnValue: 0,
-      ) as int);
+  int get movieId =>
+      (super.noSuchMethod(Invocation.getter(#movieId), returnValue: 0) as int);
 
   @override
-  _i9.MovieDetailState get state => (super.noSuchMethod(
-        Invocation.getter(#state),
-        returnValue: _FakeMovieDetailState_7(
-          this,
-          Invocation.getter(#state),
-        ),
-      ) as _i9.MovieDetailState);
+  _i9.MovieDetailState get state =>
+      (super.noSuchMethod(
+            Invocation.getter(#state),
+            returnValue: _FakeMovieDetailState_7(
+              this,
+              Invocation.getter(#state),
+            ),
+          )
+          as _i9.MovieDetailState);
 
   @override
-  _i11.Stream<_i9.MovieDetailState> get stream => (super.noSuchMethod(
-        Invocation.getter(#stream),
-        returnValue: _i11.Stream<_i9.MovieDetailState>.empty(),
-      ) as _i11.Stream<_i9.MovieDetailState>);
+  _i11.Stream<_i9.MovieDetailState> get stream =>
+      (super.noSuchMethod(
+            Invocation.getter(#stream),
+            returnValue: _i11.Stream<_i9.MovieDetailState>.empty(),
+          )
+          as _i11.Stream<_i9.MovieDetailState>);
 
   @override
-  bool get isClosed => (super.noSuchMethod(
-        Invocation.getter(#isClosed),
-        returnValue: false,
-      ) as bool);
+  bool get isClosed =>
+      (super.noSuchMethod(Invocation.getter(#isClosed), returnValue: false)
+          as bool);
 
   @override
   void add(_i9.MovieDetailEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #add,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#add, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onEvent(_i9.MovieDetailEvent? event) => super.noSuchMethod(
-        Invocation.method(
-          #onEvent,
-          [event],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#onEvent, [event]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void emit(_i9.MovieDetailState? state) => super.noSuchMethod(
-        Invocation.method(
-          #emit,
-          [state],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#emit, [state]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void on<E extends _i9.MovieDetailEvent>(
     _i18.EventHandler<E, _i9.MovieDetailState>? handler, {
     _i18.EventTransformer<E>? transformer,
-  }) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #on,
-          [handler],
-          {#transformer: transformer},
-        ),
-        returnValueForMissingStub: null,
-      );
+  }) => super.noSuchMethod(
+    Invocation.method(#on, [handler], {#transformer: transformer}),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onTransition(
-          _i18.Transition<_i9.MovieDetailEvent, _i9.MovieDetailState>?
-              transition) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onTransition,
-          [transition],
-        ),
-        returnValueForMissingStub: null,
-      );
+    _i18.Transition<_i9.MovieDetailEvent, _i9.MovieDetailState>? transition,
+  ) => super.noSuchMethod(
+    Invocation.method(#onTransition, [transition]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void onDone(
     _i9.MovieDetailEvent? event, [
     Object? error,
     StackTrace? stackTrace,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onDone,
-          [
-            event,
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  ]) => super.noSuchMethod(
+    Invocation.method(#onDone, [event, error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  _i11.Future<void> close() => (super.noSuchMethod(
-        Invocation.method(
-          #close,
-          [],
-        ),
-        returnValue: _i11.Future<void>.value(),
-        returnValueForMissingStub: _i11.Future<void>.value(),
-      ) as _i11.Future<void>);
+  _i11.Future<void> close() =>
+      (super.noSuchMethod(
+            Invocation.method(#close, []),
+            returnValue: _i11.Future<void>.value(),
+            returnValueForMissingStub: _i11.Future<void>.value(),
+          )
+          as _i11.Future<void>);
 
   @override
   void onChange(_i18.Change<_i9.MovieDetailState>? change) =>
       super.noSuchMethod(
-        Invocation.method(
-          #onChange,
-          [change],
-        ),
+        Invocation.method(#onChange, [change]),
         returnValueForMissingStub: null,
       );
 
   @override
-  void addError(
-    Object? error, [
-    StackTrace? stackTrace,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #addError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void addError(Object? error, [StackTrace? stackTrace]) => super.noSuchMethod(
+    Invocation.method(#addError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void onError(
-    Object? error,
-    StackTrace? stackTrace,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #onError,
-          [
-            error,
-            stackTrace,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void onError(Object? error, StackTrace? stackTrace) => super.noSuchMethod(
+    Invocation.method(#onError, [error, stackTrace]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [Dio].
@@ -1230,78 +873,70 @@ class MockDio extends _i1.Mock implements _i2.Dio {
   }
 
   @override
-  _i2.BaseOptions get options => (super.noSuchMethod(
-        Invocation.getter(#options),
-        returnValue: _FakeBaseOptions_8(
-          this,
-          Invocation.getter(#options),
-        ),
-      ) as _i2.BaseOptions);
+  _i2.BaseOptions get options =>
+      (super.noSuchMethod(
+            Invocation.getter(#options),
+            returnValue: _FakeBaseOptions_8(this, Invocation.getter(#options)),
+          )
+          as _i2.BaseOptions);
 
   @override
   set options(_i2.BaseOptions? _options) => super.noSuchMethod(
-        Invocation.setter(
-          #options,
-          _options,
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.setter(#options, _options),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  _i2.HttpClientAdapter get httpClientAdapter => (super.noSuchMethod(
-        Invocation.getter(#httpClientAdapter),
-        returnValue: _FakeHttpClientAdapter_9(
-          this,
-          Invocation.getter(#httpClientAdapter),
-        ),
-      ) as _i2.HttpClientAdapter);
+  _i2.HttpClientAdapter get httpClientAdapter =>
+      (super.noSuchMethod(
+            Invocation.getter(#httpClientAdapter),
+            returnValue: _FakeHttpClientAdapter_9(
+              this,
+              Invocation.getter(#httpClientAdapter),
+            ),
+          )
+          as _i2.HttpClientAdapter);
 
   @override
   set httpClientAdapter(_i2.HttpClientAdapter? _httpClientAdapter) =>
       super.noSuchMethod(
-        Invocation.setter(
-          #httpClientAdapter,
-          _httpClientAdapter,
-        ),
+        Invocation.setter(#httpClientAdapter, _httpClientAdapter),
         returnValueForMissingStub: null,
       );
 
   @override
-  _i2.Transformer get transformer => (super.noSuchMethod(
-        Invocation.getter(#transformer),
-        returnValue: _FakeTransformer_10(
-          this,
-          Invocation.getter(#transformer),
-        ),
-      ) as _i2.Transformer);
+  _i2.Transformer get transformer =>
+      (super.noSuchMethod(
+            Invocation.getter(#transformer),
+            returnValue: _FakeTransformer_10(
+              this,
+              Invocation.getter(#transformer),
+            ),
+          )
+          as _i2.Transformer);
 
   @override
   set transformer(_i2.Transformer? _transformer) => super.noSuchMethod(
-        Invocation.setter(
-          #transformer,
-          _transformer,
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.setter(#transformer, _transformer),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  _i2.Interceptors get interceptors => (super.noSuchMethod(
-        Invocation.getter(#interceptors),
-        returnValue: _FakeInterceptors_11(
-          this,
-          Invocation.getter(#interceptors),
-        ),
-      ) as _i2.Interceptors);
+  _i2.Interceptors get interceptors =>
+      (super.noSuchMethod(
+            Invocation.getter(#interceptors),
+            returnValue: _FakeInterceptors_11(
+              this,
+              Invocation.getter(#interceptors),
+            ),
+          )
+          as _i2.Interceptors);
 
   @override
   void close({bool? force = false}) => super.noSuchMethod(
-        Invocation.method(
-          #close,
-          [],
-          {#force: force},
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#close, [], {#force: force}),
+    returnValueForMissingStub: null,
+  );
 
   @override
   _i11.Future<_i2.Response<T>> head<T>(
@@ -1312,30 +947,33 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.CancelToken? cancelToken,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #head,
-          [path],
-          {
-            #data: data,
-            #queryParameters: queryParameters,
-            #options: options,
-            #cancelToken: cancelToken,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #head,
-            [path],
-            {
-              #data: data,
-              #queryParameters: queryParameters,
-              #options: options,
-              #cancelToken: cancelToken,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #head,
+              [path],
+              {
+                #data: data,
+                #queryParameters: queryParameters,
+                #options: options,
+                #cancelToken: cancelToken,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #head,
+                  [path],
+                  {
+                    #data: data,
+                    #queryParameters: queryParameters,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> headUri<T>(
@@ -1345,28 +983,23 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.CancelToken? cancelToken,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #headUri,
-          [uri],
-          {
-            #data: data,
-            #options: options,
-            #cancelToken: cancelToken,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #headUri,
-            [uri],
-            {
-              #data: data,
-              #options: options,
-              #cancelToken: cancelToken,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #headUri,
+              [uri],
+              {#data: data, #options: options, #cancelToken: cancelToken},
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #headUri,
+                  [uri],
+                  {#data: data, #options: options, #cancelToken: cancelToken},
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> get<T>(
@@ -1378,32 +1011,35 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #get,
-          [path],
-          {
-            #data: data,
-            #queryParameters: queryParameters,
-            #options: options,
-            #cancelToken: cancelToken,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #get,
-            [path],
-            {
-              #data: data,
-              #queryParameters: queryParameters,
-              #options: options,
-              #cancelToken: cancelToken,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #get,
+              [path],
+              {
+                #data: data,
+                #queryParameters: queryParameters,
+                #options: options,
+                #cancelToken: cancelToken,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #get,
+                  [path],
+                  {
+                    #data: data,
+                    #queryParameters: queryParameters,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> getUri<T>(
@@ -1414,30 +1050,33 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #getUri,
-          [uri],
-          {
-            #data: data,
-            #options: options,
-            #cancelToken: cancelToken,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #getUri,
-            [uri],
-            {
-              #data: data,
-              #options: options,
-              #cancelToken: cancelToken,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #getUri,
+              [uri],
+              {
+                #data: data,
+                #options: options,
+                #cancelToken: cancelToken,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #getUri,
+                  [uri],
+                  {
+                    #data: data,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> post<T>(
@@ -1450,34 +1089,37 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #post,
-          [path],
-          {
-            #data: data,
-            #queryParameters: queryParameters,
-            #options: options,
-            #cancelToken: cancelToken,
-            #onSendProgress: onSendProgress,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #post,
-            [path],
-            {
-              #data: data,
-              #queryParameters: queryParameters,
-              #options: options,
-              #cancelToken: cancelToken,
-              #onSendProgress: onSendProgress,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #post,
+              [path],
+              {
+                #data: data,
+                #queryParameters: queryParameters,
+                #options: options,
+                #cancelToken: cancelToken,
+                #onSendProgress: onSendProgress,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #post,
+                  [path],
+                  {
+                    #data: data,
+                    #queryParameters: queryParameters,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                    #onSendProgress: onSendProgress,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> postUri<T>(
@@ -1489,32 +1131,35 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #postUri,
-          [uri],
-          {
-            #data: data,
-            #options: options,
-            #cancelToken: cancelToken,
-            #onSendProgress: onSendProgress,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #postUri,
-            [uri],
-            {
-              #data: data,
-              #options: options,
-              #cancelToken: cancelToken,
-              #onSendProgress: onSendProgress,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #postUri,
+              [uri],
+              {
+                #data: data,
+                #options: options,
+                #cancelToken: cancelToken,
+                #onSendProgress: onSendProgress,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #postUri,
+                  [uri],
+                  {
+                    #data: data,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                    #onSendProgress: onSendProgress,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> put<T>(
@@ -1527,34 +1172,37 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #put,
-          [path],
-          {
-            #data: data,
-            #queryParameters: queryParameters,
-            #options: options,
-            #cancelToken: cancelToken,
-            #onSendProgress: onSendProgress,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #put,
-            [path],
-            {
-              #data: data,
-              #queryParameters: queryParameters,
-              #options: options,
-              #cancelToken: cancelToken,
-              #onSendProgress: onSendProgress,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #put,
+              [path],
+              {
+                #data: data,
+                #queryParameters: queryParameters,
+                #options: options,
+                #cancelToken: cancelToken,
+                #onSendProgress: onSendProgress,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #put,
+                  [path],
+                  {
+                    #data: data,
+                    #queryParameters: queryParameters,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                    #onSendProgress: onSendProgress,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> putUri<T>(
@@ -1566,32 +1214,35 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #putUri,
-          [uri],
-          {
-            #data: data,
-            #options: options,
-            #cancelToken: cancelToken,
-            #onSendProgress: onSendProgress,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #putUri,
-            [uri],
-            {
-              #data: data,
-              #options: options,
-              #cancelToken: cancelToken,
-              #onSendProgress: onSendProgress,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #putUri,
+              [uri],
+              {
+                #data: data,
+                #options: options,
+                #cancelToken: cancelToken,
+                #onSendProgress: onSendProgress,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #putUri,
+                  [uri],
+                  {
+                    #data: data,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                    #onSendProgress: onSendProgress,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> patch<T>(
@@ -1604,34 +1255,37 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #patch,
-          [path],
-          {
-            #data: data,
-            #queryParameters: queryParameters,
-            #options: options,
-            #cancelToken: cancelToken,
-            #onSendProgress: onSendProgress,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #patch,
-            [path],
-            {
-              #data: data,
-              #queryParameters: queryParameters,
-              #options: options,
-              #cancelToken: cancelToken,
-              #onSendProgress: onSendProgress,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #patch,
+              [path],
+              {
+                #data: data,
+                #queryParameters: queryParameters,
+                #options: options,
+                #cancelToken: cancelToken,
+                #onSendProgress: onSendProgress,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #patch,
+                  [path],
+                  {
+                    #data: data,
+                    #queryParameters: queryParameters,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                    #onSendProgress: onSendProgress,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> patchUri<T>(
@@ -1643,32 +1297,35 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #patchUri,
-          [uri],
-          {
-            #data: data,
-            #options: options,
-            #cancelToken: cancelToken,
-            #onSendProgress: onSendProgress,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #patchUri,
-            [uri],
-            {
-              #data: data,
-              #options: options,
-              #cancelToken: cancelToken,
-              #onSendProgress: onSendProgress,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #patchUri,
+              [uri],
+              {
+                #data: data,
+                #options: options,
+                #cancelToken: cancelToken,
+                #onSendProgress: onSendProgress,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #patchUri,
+                  [uri],
+                  {
+                    #data: data,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                    #onSendProgress: onSendProgress,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> delete<T>(
@@ -1679,30 +1336,33 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.CancelToken? cancelToken,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #delete,
-          [path],
-          {
-            #data: data,
-            #queryParameters: queryParameters,
-            #options: options,
-            #cancelToken: cancelToken,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #delete,
-            [path],
-            {
-              #data: data,
-              #queryParameters: queryParameters,
-              #options: options,
-              #cancelToken: cancelToken,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #delete,
+              [path],
+              {
+                #data: data,
+                #queryParameters: queryParameters,
+                #options: options,
+                #cancelToken: cancelToken,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #delete,
+                  [path],
+                  {
+                    #data: data,
+                    #queryParameters: queryParameters,
+                    #options: options,
+                    #cancelToken: cancelToken,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> deleteUri<T>(
@@ -1712,28 +1372,23 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.CancelToken? cancelToken,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #deleteUri,
-          [uri],
-          {
-            #data: data,
-            #options: options,
-            #cancelToken: cancelToken,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #deleteUri,
-            [uri],
-            {
-              #data: data,
-              #options: options,
-              #cancelToken: cancelToken,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #deleteUri,
+              [uri],
+              {#data: data, #options: options, #cancelToken: cancelToken},
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #deleteUri,
+                  [uri],
+                  {#data: data, #options: options, #cancelToken: cancelToken},
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<dynamic>> download(
@@ -1749,45 +1404,41 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.Options? options,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #download,
-          [
-            urlPath,
-            savePath,
-          ],
-          {
-            #onReceiveProgress: onReceiveProgress,
-            #queryParameters: queryParameters,
-            #cancelToken: cancelToken,
-            #deleteOnError: deleteOnError,
-            #fileAccessMode: fileAccessMode,
-            #lengthHeader: lengthHeader,
-            #data: data,
-            #options: options,
-          },
-        ),
-        returnValue:
-            _i11.Future<_i2.Response<dynamic>>.value(_FakeResponse_12<dynamic>(
-          this,
-          Invocation.method(
-            #download,
-            [
-              urlPath,
-              savePath,
-            ],
-            {
-              #onReceiveProgress: onReceiveProgress,
-              #queryParameters: queryParameters,
-              #cancelToken: cancelToken,
-              #deleteOnError: deleteOnError,
-              #fileAccessMode: fileAccessMode,
-              #lengthHeader: lengthHeader,
-              #data: data,
-              #options: options,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<dynamic>>);
+            Invocation.method(
+              #download,
+              [urlPath, savePath],
+              {
+                #onReceiveProgress: onReceiveProgress,
+                #queryParameters: queryParameters,
+                #cancelToken: cancelToken,
+                #deleteOnError: deleteOnError,
+                #fileAccessMode: fileAccessMode,
+                #lengthHeader: lengthHeader,
+                #data: data,
+                #options: options,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<dynamic>>.value(
+              _FakeResponse_12<dynamic>(
+                this,
+                Invocation.method(
+                  #download,
+                  [urlPath, savePath],
+                  {
+                    #onReceiveProgress: onReceiveProgress,
+                    #queryParameters: queryParameters,
+                    #cancelToken: cancelToken,
+                    #deleteOnError: deleteOnError,
+                    #fileAccessMode: fileAccessMode,
+                    #lengthHeader: lengthHeader,
+                    #data: data,
+                    #options: options,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<dynamic>>);
 
   @override
   _i11.Future<_i2.Response<dynamic>> downloadUri(
@@ -1802,43 +1453,39 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.Options? options,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #downloadUri,
-          [
-            uri,
-            savePath,
-          ],
-          {
-            #onReceiveProgress: onReceiveProgress,
-            #cancelToken: cancelToken,
-            #deleteOnError: deleteOnError,
-            #fileAccessMode: fileAccessMode,
-            #lengthHeader: lengthHeader,
-            #data: data,
-            #options: options,
-          },
-        ),
-        returnValue:
-            _i11.Future<_i2.Response<dynamic>>.value(_FakeResponse_12<dynamic>(
-          this,
-          Invocation.method(
-            #downloadUri,
-            [
-              uri,
-              savePath,
-            ],
-            {
-              #onReceiveProgress: onReceiveProgress,
-              #cancelToken: cancelToken,
-              #deleteOnError: deleteOnError,
-              #fileAccessMode: fileAccessMode,
-              #lengthHeader: lengthHeader,
-              #data: data,
-              #options: options,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<dynamic>>);
+            Invocation.method(
+              #downloadUri,
+              [uri, savePath],
+              {
+                #onReceiveProgress: onReceiveProgress,
+                #cancelToken: cancelToken,
+                #deleteOnError: deleteOnError,
+                #fileAccessMode: fileAccessMode,
+                #lengthHeader: lengthHeader,
+                #data: data,
+                #options: options,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<dynamic>>.value(
+              _FakeResponse_12<dynamic>(
+                this,
+                Invocation.method(
+                  #downloadUri,
+                  [uri, savePath],
+                  {
+                    #onReceiveProgress: onReceiveProgress,
+                    #cancelToken: cancelToken,
+                    #deleteOnError: deleteOnError,
+                    #fileAccessMode: fileAccessMode,
+                    #lengthHeader: lengthHeader,
+                    #data: data,
+                    #options: options,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<dynamic>>);
 
   @override
   _i11.Future<_i2.Response<T>> request<T>(
@@ -1851,34 +1498,37 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #request,
-          [url],
-          {
-            #data: data,
-            #queryParameters: queryParameters,
-            #cancelToken: cancelToken,
-            #options: options,
-            #onSendProgress: onSendProgress,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #request,
-            [url],
-            {
-              #data: data,
-              #queryParameters: queryParameters,
-              #cancelToken: cancelToken,
-              #options: options,
-              #onSendProgress: onSendProgress,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #request,
+              [url],
+              {
+                #data: data,
+                #queryParameters: queryParameters,
+                #cancelToken: cancelToken,
+                #options: options,
+                #onSendProgress: onSendProgress,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #request,
+                  [url],
+                  {
+                    #data: data,
+                    #queryParameters: queryParameters,
+                    #cancelToken: cancelToken,
+                    #options: options,
+                    #onSendProgress: onSendProgress,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> requestUri<T>(
@@ -1890,48 +1540,48 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.ProgressCallback? onReceiveProgress,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #requestUri,
-          [uri],
-          {
-            #data: data,
-            #cancelToken: cancelToken,
-            #options: options,
-            #onSendProgress: onSendProgress,
-            #onReceiveProgress: onReceiveProgress,
-          },
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #requestUri,
-            [uri],
-            {
-              #data: data,
-              #cancelToken: cancelToken,
-              #options: options,
-              #onSendProgress: onSendProgress,
-              #onReceiveProgress: onReceiveProgress,
-            },
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(
+              #requestUri,
+              [uri],
+              {
+                #data: data,
+                #cancelToken: cancelToken,
+                #options: options,
+                #onSendProgress: onSendProgress,
+                #onReceiveProgress: onReceiveProgress,
+              },
+            ),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(
+                  #requestUri,
+                  [uri],
+                  {
+                    #data: data,
+                    #cancelToken: cancelToken,
+                    #options: options,
+                    #onSendProgress: onSendProgress,
+                    #onReceiveProgress: onReceiveProgress,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i11.Future<_i2.Response<T>> fetch<T>(_i2.RequestOptions? requestOptions) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #fetch,
-          [requestOptions],
-        ),
-        returnValue: _i11.Future<_i2.Response<T>>.value(_FakeResponse_12<T>(
-          this,
-          Invocation.method(
-            #fetch,
-            [requestOptions],
-          ),
-        )),
-      ) as _i11.Future<_i2.Response<T>>);
+            Invocation.method(#fetch, [requestOptions]),
+            returnValue: _i11.Future<_i2.Response<T>>.value(
+              _FakeResponse_12<T>(
+                this,
+                Invocation.method(#fetch, [requestOptions]),
+              ),
+            ),
+          )
+          as _i11.Future<_i2.Response<T>>);
 
   @override
   _i2.Dio clone({
@@ -1941,28 +1591,21 @@ class MockDio extends _i1.Mock implements _i2.Dio {
     _i2.Transformer? transformer,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #clone,
-          [],
-          {
-            #options: options,
-            #interceptors: interceptors,
-            #httpClientAdapter: httpClientAdapter,
-            #transformer: transformer,
-          },
-        ),
-        returnValue: _FakeDio_0(
-          this,
-          Invocation.method(
-            #clone,
-            [],
-            {
+            Invocation.method(#clone, [], {
               #options: options,
               #interceptors: interceptors,
               #httpClientAdapter: httpClientAdapter,
               #transformer: transformer,
-            },
-          ),
-        ),
-      ) as _i2.Dio);
+            }),
+            returnValue: _FakeDio_0(
+              this,
+              Invocation.method(#clone, [], {
+                #options: options,
+                #interceptors: interceptors,
+                #httpClientAdapter: httpClientAdapter,
+                #transformer: transformer,
+              }),
+            ),
+          )
+          as _i2.Dio);
 }

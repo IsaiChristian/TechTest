@@ -21,36 +21,30 @@ void main() {
   blocTest<AppBloc, AppState>(
     'emits [AppSessionExpired] when GlobalErrorBus dispatches unauthorized error',
     build: () => appBloc,
-    act: (bloc) => GlobalErrorBus.dispatch(AppError('unauthorized', 'Session expired')),
-    expect: () => [
-      const AppSessionExpired('Session expired'),
-    ],
+    act: (bloc) =>
+        GlobalErrorBus.dispatch(AppError('unauthorized', 'Session expired')),
+    expect: () => [const AppSessionExpired('Session expired')],
   );
 
   blocTest<AppBloc, AppState>(
     'emits [AppNetworkError] when GlobalErrorBus dispatches network error',
     build: () => appBloc,
     act: (bloc) => GlobalErrorBus.dispatch(AppError('network', 'No internet')),
-    expect: () => [
-      const AppNetworkError('No internet'),
-    ],
+    expect: () => [const AppNetworkError('No internet')],
   );
 
   blocTest<AppBloc, AppState>(
     'emits [AppServerError] when GlobalErrorBus dispatches server_error',
     build: () => appBloc,
-    act: (bloc) => GlobalErrorBus.dispatch(AppError('server_error', 'Server down')),
-    expect: () => [
-      const AppServerError('Server down'),
-    ],
+    act: (bloc) =>
+        GlobalErrorBus.dispatch(AppError('server_error', 'Server down')),
+    expect: () => [const AppServerError('Server down')],
   );
 
   blocTest<AppBloc, AppState>(
     'emits [AppUnknownError] when GlobalErrorBus dispatches unknown error',
     build: () => appBloc,
     act: (bloc) => GlobalErrorBus.dispatch(AppError('unknown', 'Unknown')),
-    expect: () => [
-      const AppUnknownError('Unknown'),
-    ],
+    expect: () => [const AppUnknownError('Unknown')],
   );
 }

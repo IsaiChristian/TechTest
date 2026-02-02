@@ -7,7 +7,10 @@ void main() {
   group('mapDioException', () {
     test('should return NetworkFailure on connectionTimeout', () {
       final result = mapDioException(
-        DioException(requestOptions: RequestOptions(path: ''), type: DioExceptionType.connectionTimeout),
+        DioException(
+          requestOptions: RequestOptions(path: ''),
+          type: DioExceptionType.connectionTimeout,
+        ),
       );
       expect(result, isA<NetworkFailure>());
     });
@@ -17,7 +20,10 @@ void main() {
         DioException(
           requestOptions: RequestOptions(path: ''),
           type: DioExceptionType.badResponse,
-          response: Response(requestOptions: RequestOptions(path: ''), statusCode: 401),
+          response: Response(
+            requestOptions: RequestOptions(path: ''),
+            statusCode: 401,
+          ),
         ),
       );
       expect(result, isA<UnauthorizedFailure>());
@@ -28,7 +34,10 @@ void main() {
         DioException(
           requestOptions: RequestOptions(path: ''),
           type: DioExceptionType.badResponse,
-          response: Response(requestOptions: RequestOptions(path: ''), statusCode: 500),
+          response: Response(
+            requestOptions: RequestOptions(path: ''),
+            statusCode: 500,
+          ),
         ),
       );
       expect(result, isA<ServerFailure>());
@@ -36,7 +45,11 @@ void main() {
 
     test('should return UnexpectedFailure on default', () {
       final result = mapDioException(
-        DioException(requestOptions: RequestOptions(path: ''), type: DioExceptionType.unknown, message: 'error'),
+        DioException(
+          requestOptions: RequestOptions(path: ''),
+          type: DioExceptionType.unknown,
+          message: 'error',
+        ),
       );
       expect(result, isA<UnexpectedFailure>());
     });

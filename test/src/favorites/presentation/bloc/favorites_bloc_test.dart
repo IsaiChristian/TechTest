@@ -26,7 +26,9 @@ void main() {
 
   setUp(() {
     mockFavoriteRepository = MockFavoriteRepositoryImpl();
-    favoritesBloc = FavoritesBloc(favoriteRepositoryImpl: mockFavoriteRepository);
+    favoritesBloc = FavoritesBloc(
+      favoriteRepositoryImpl: mockFavoriteRepository,
+    );
   });
 
   tearDown(() {
@@ -40,9 +42,9 @@ void main() {
   blocTest<FavoritesBloc, FavoritesState>(
     'emits [FavoritesLoading, FavoritesLoaded] when LoadFavorites is added and repository returns success',
     build: () {
-      when(mockFavoriteRepository.getFavoriteMovies()).thenAnswer(
-        (_) async => Right(tFavoritesList),
-      );
+      when(
+        mockFavoriteRepository.getFavoriteMovies(),
+      ).thenAnswer((_) async => Right(tFavoritesList));
       return favoritesBloc;
     },
     act: (bloc) => bloc.add(LoadFavorites()),
@@ -55,43 +57,38 @@ void main() {
   blocTest<FavoritesBloc, FavoritesState>(
     'emits [FavoritesLoading, FavoritesError] when LoadFavorites is added and repository returns failure',
     build: () {
-      when(mockFavoriteRepository.getFavoriteMovies()).thenAnswer(
-        (_) async => Left(UnexpectedFailure('Error')),
-      );
+      when(
+        mockFavoriteRepository.getFavoriteMovies(),
+      ).thenAnswer((_) async => Left(UnexpectedFailure('Error')));
       return favoritesBloc;
     },
     act: (bloc) => bloc.add(LoadFavorites()),
-    expect: () => [
-      FavoritesLoading(),
-      const FavoritesError(message: 'Error'),
-    ],
+    expect: () => [FavoritesLoading(), const FavoritesError(message: 'Error')],
   );
 
   blocTest<FavoritesBloc, FavoritesState>(
     'emits [FavoritesLoaded] (updated) when AddFavoriteMovie is added and success',
     seed: () => const FavoritesLoaded(favoriteMovies: []),
     build: () {
-      when(mockFavoriteRepository.addMovieToFavorites(tMovie)).thenAnswer(
-        (_) async => const Right(null),
-      );
-      when(mockFavoriteRepository.getFavoriteMovies()).thenAnswer(
-        (_) async => Right(tFavoritesList),
-      );
+      when(
+        mockFavoriteRepository.addMovieToFavorites(tMovie),
+      ).thenAnswer((_) async => const Right(null));
+      when(
+        mockFavoriteRepository.getFavoriteMovies(),
+      ).thenAnswer((_) async => Right(tFavoritesList));
       return favoritesBloc;
     },
     act: (bloc) => bloc.add(AddFavoriteMovie(tMovie)),
-    expect: () => [
-      FavoritesLoaded(favoriteMovies: tFavoritesList),
-    ],
+    expect: () => [FavoritesLoaded(favoriteMovies: tFavoritesList)],
   );
 
   blocTest<FavoritesBloc, FavoritesState>(
     'emits [FavoritesError] when AddFavoriteMovie fails',
     seed: () => const FavoritesLoaded(favoriteMovies: []),
     build: () {
-      when(mockFavoriteRepository.addMovieToFavorites(tMovie)).thenAnswer(
-        (_) async => Left(UnexpectedFailure('Error')),
-      );
+      when(
+        mockFavoriteRepository.addMovieToFavorites(tMovie),
+      ).thenAnswer((_) async => Left(UnexpectedFailure('Error')));
       return favoritesBloc;
     },
     act: (bloc) => bloc.add(AddFavoriteMovie(tMovie)),
@@ -100,31 +97,29 @@ void main() {
     ],
   );
 
-    blocTest<FavoritesBloc, FavoritesState>(
+  blocTest<FavoritesBloc, FavoritesState>(
     'emits [FavoritesLoaded] (updated) when RemoveFavoriteMovie is added and success',
     seed: () => FavoritesLoaded(favoriteMovies: tFavoritesList),
     build: () {
-      when(mockFavoriteRepository.removeMovieFromFavorites(tMovie.id)).thenAnswer(
-        (_) async => const Right(null),
-      );
-      when(mockFavoriteRepository.getFavoriteMovies()).thenAnswer(
-        (_) async => const Right([]),
-      );
+      when(
+        mockFavoriteRepository.removeMovieFromFavorites(tMovie.id),
+      ).thenAnswer((_) async => const Right(null));
+      when(
+        mockFavoriteRepository.getFavoriteMovies(),
+      ).thenAnswer((_) async => const Right([]));
       return favoritesBloc;
     },
     act: (bloc) => bloc.add(RemoveFavoriteMovie(tMovie)),
-    expect: () => [
-      const FavoritesLoaded(favoriteMovies: []),
-    ],
+    expect: () => [const FavoritesLoaded(favoriteMovies: [])],
   );
 
-   blocTest<FavoritesBloc, FavoritesState>(
+  blocTest<FavoritesBloc, FavoritesState>(
     'emits [FavoritesError] when RemoveFavoriteMovie fails',
     seed: () => FavoritesLoaded(favoriteMovies: tFavoritesList),
     build: () {
-      when(mockFavoriteRepository.removeMovieFromFavorites(tMovie.id)).thenAnswer(
-        (_) async => Left(UnexpectedFailure('Error')),
-      );
+      when(
+        mockFavoriteRepository.removeMovieFromFavorites(tMovie.id),
+      ).thenAnswer((_) async => Left(UnexpectedFailure('Error')));
       return favoritesBloc;
     },
     act: (bloc) => bloc.add(RemoveFavoriteMovie(tMovie)),

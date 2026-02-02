@@ -65,9 +65,9 @@ void main() {
   blocTest<HomeBloc, HomeState>(
     'emits [HomeLoading, HomeReady] when HomeInit is added and repository returns success',
     build: () {
-      when(mockMovieRepository.getPopularMovies()).thenAnswer(
-        (_) async => Right(tPopularMovies),
-      );
+      when(
+        mockMovieRepository.getPopularMovies(),
+      ).thenAnswer((_) async => Right(tPopularMovies));
       return homeBloc;
     },
     act: (bloc) => bloc.add(const HomeInit()),
@@ -80,16 +80,13 @@ void main() {
   blocTest<HomeBloc, HomeState>(
     'emits [HomeLoading, HomeError] when HomeInit is added and repository returns failure',
     build: () {
-      when(mockMovieRepository.getPopularMovies()).thenAnswer(
-        (_) async => Left(ServerFailure('Error')),
-      );
+      when(
+        mockMovieRepository.getPopularMovies(),
+      ).thenAnswer((_) async => Left(ServerFailure('Error')));
       return homeBloc;
     },
     act: (bloc) => bloc.add(const HomeInit()),
-    expect: () => [
-      HomeLoading(),
-      HomeError(),
-    ],
+    expect: () => [HomeLoading(), HomeError()],
   );
 
   blocTest<HomeBloc, HomeState>(
@@ -104,16 +101,12 @@ void main() {
 
   blocTest<HomeBloc, HomeState>(
     'emits [HomeReady] with new movies when HomeLoadMore is added and repository returns success',
-    seed: () => HomeReady(
-      movies: tMovies,
-      page: 1,
-      totalPages: 2,
-      isLoadingMore: true,
-    ),
+    seed: () =>
+        HomeReady(movies: tMovies, page: 1, totalPages: 2, isLoadingMore: true),
     build: () {
-      when(mockMovieRepository.getPopularMovies(page: 2)).thenAnswer(
-        (_) async => Right(tPopularMoviesPage2),
-      );
+      when(
+        mockMovieRepository.getPopularMovies(page: 2),
+      ).thenAnswer((_) async => Right(tPopularMoviesPage2));
       return homeBloc;
     },
     act: (bloc) => bloc.add(const HomeLoadMore()),
@@ -127,23 +120,17 @@ void main() {
     ],
   );
 
-   blocTest<HomeBloc, HomeState>(
+  blocTest<HomeBloc, HomeState>(
     'emits [HomeError] when HomeLoadMore is added and repository returns failure',
-    seed: () => HomeReady(
-      movies: tMovies,
-      page: 1,
-      totalPages: 2,
-      isLoadingMore: true,
-    ),
+    seed: () =>
+        HomeReady(movies: tMovies, page: 1, totalPages: 2, isLoadingMore: true),
     build: () {
-      when(mockMovieRepository.getPopularMovies(page: 2)).thenAnswer(
-        (_) async => Left(ServerFailure('Error')),
-      );
+      when(
+        mockMovieRepository.getPopularMovies(page: 2),
+      ).thenAnswer((_) async => Left(ServerFailure('Error')));
       return homeBloc;
     },
     act: (bloc) => bloc.add(const HomeLoadMore()),
-    expect: () => [
-      HomeError(),
-    ],
+    expect: () => [HomeError()],
   );
 }

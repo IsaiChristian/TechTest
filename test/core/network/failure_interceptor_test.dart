@@ -32,7 +32,11 @@ void main() {
 
       final expectation = expectLater(
         GlobalErrorBus.stream,
-        emits(predicate<AppError>((e) => e.type == 'unauthorized' && e.message == 'Session expired')),
+        emits(
+          predicate<AppError>(
+            (e) => e.type == 'unauthorized' && e.message == 'Session expired',
+          ),
+        ),
       );
 
       failureInterceptor.onError(dioException, handler);
@@ -52,7 +56,13 @@ void main() {
 
       final expectation = expectLater(
         GlobalErrorBus.stream,
-        emits(predicate<AppError>((e) => e.type == 'server_error' && e.message == 'Internal Server Error')),
+        emits(
+          predicate<AppError>(
+            (e) =>
+                e.type == 'server_error' &&
+                e.message == 'Internal Server Error',
+          ),
+        ),
       );
 
       failureInterceptor.onError(dioException, handler);
@@ -71,7 +81,12 @@ void main() {
 
       final expectation = expectLater(
         GlobalErrorBus.stream,
-        emits(predicate<AppError>((e) => e.type == 'server_error' && e.message == 'Resource Not Found')),
+        emits(
+          predicate<AppError>(
+            (e) =>
+                e.type == 'server_error' && e.message == 'Resource Not Found',
+          ),
+        ),
       );
 
       failureInterceptor.onError(dioException, handler);
@@ -87,7 +102,11 @@ void main() {
 
       final expectation = expectLater(
         GlobalErrorBus.stream,
-        emits(predicate<AppError>((e) => e.type == 'network' && e.message == 'Connection Timeout')),
+        emits(
+          predicate<AppError>(
+            (e) => e.type == 'network' && e.message == 'Connection Timeout',
+          ),
+        ),
       );
 
       failureInterceptor.onError(dioException, handler);
@@ -96,7 +115,7 @@ void main() {
     });
 
     test('should call handler.next with wrapped error', () {
-       final dioException = DioException(
+      final dioException = DioException(
         requestOptions: RequestOptions(path: ''),
         response: Response(
           requestOptions: RequestOptions(path: ''),

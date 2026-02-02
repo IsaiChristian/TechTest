@@ -6,9 +6,7 @@ void main() {
   testWidgets('TtAppBar renders title correctly', (WidgetTester tester) async {
     await tester.pumpWidget(
       const MaterialApp(
-        home: Scaffold(
-          appBar: TtAppBar(title: 'Test Title'),
-        ),
+        home: Scaffold(appBar: TtAppBar(title: 'Test Title')),
       ),
     );
 
@@ -18,11 +16,7 @@ void main() {
 
   testWidgets('TtAppBar renders without title', (WidgetTester tester) async {
     await tester.pumpWidget(
-      const MaterialApp(
-        home: Scaffold(
-          appBar: TtAppBar(),
-        ),
-      ),
+      const MaterialApp(home: Scaffold(appBar: TtAppBar())),
     );
 
     expect(find.byType(TtAppBar), findsOneWidget);

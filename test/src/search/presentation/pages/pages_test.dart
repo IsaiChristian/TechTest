@@ -27,9 +27,13 @@ void main() {
   }
 
   group('SearchPageView', () {
-    testWidgets('shows initial state with search input centered', (tester) async {
+    testWidgets('shows initial state with search input centered', (
+      tester,
+    ) async {
       when(mockSearchBloc.state).thenReturn(SearchInitial());
-      when(mockSearchBloc.stream).thenAnswer((_) => Stream.value(SearchInitial()));
+      when(
+        mockSearchBloc.stream,
+      ).thenAnswer((_) => Stream.value(SearchInitial()));
 
       await tester.pumpWidget(createWidgetUnderMain(const SearchPageView()));
 
@@ -40,7 +44,9 @@ void main() {
 
     testWidgets('shows loading state', (tester) async {
       when(mockSearchBloc.state).thenReturn(SearchLoading());
-      when(mockSearchBloc.stream).thenAnswer((_) => Stream.value(SearchLoading()));
+      when(
+        mockSearchBloc.stream,
+      ).thenAnswer((_) => Stream.value(SearchLoading()));
 
       await tester.pumpWidget(createWidgetUnderMain(const SearchPageView()));
 
@@ -48,7 +54,7 @@ void main() {
     });
 
     testWidgets('shows results when state is SearchLoaded', (tester) async {
-       final List<MovieEntity> movies = [
+      final List<MovieEntity> movies = [
         const MovieEntity(
           id: 1,
           title: 'Test Movie',
@@ -57,10 +63,12 @@ void main() {
           releaseDate: '2023-01-01',
           rating: 8.0,
           genres: [],
-        )
+        ),
       ];
       when(mockSearchBloc.state).thenReturn(SearchLoaded(movies));
-      when(mockSearchBloc.stream).thenAnswer((_) => Stream.value(SearchLoaded(movies)));
+      when(
+        mockSearchBloc.stream,
+      ).thenAnswer((_) => Stream.value(SearchLoaded(movies)));
 
       await tester.pumpWidget(createWidgetUnderMain(const SearchPageView()));
 
@@ -68,24 +76,36 @@ void main() {
       expect(find.text('Test Movie'), findsOneWidget);
     });
 
-    testWidgets('shows error message when state is SearchError', (tester) async {
+    testWidgets('shows error message when state is SearchError', (
+      tester,
+    ) async {
       when(mockSearchBloc.state).thenReturn(SearchError('Not found'));
-      when(mockSearchBloc.stream).thenAnswer((_) => Stream.value(SearchError('Not found')));
+      when(
+        mockSearchBloc.stream,
+      ).thenAnswer((_) => Stream.value(SearchError('Not found')));
 
       await tester.pumpWidget(createWidgetUnderMain(const SearchPageView()));
 
       expect(find.text('Error: Not found'), findsOneWidget);
     });
 
-    testWidgets('triggers SearchSubmitted on text input', (tester) async {
+    testWidgets('triggers SearchTextChanged on text input', (tester) async {
       when(mockSearchBloc.state).thenReturn(SearchInitial());
-      when(mockSearchBloc.stream).thenAnswer((_) => Stream.value(SearchInitial()));
+      when(
+        mockSearchBloc.stream,
+      ).thenAnswer((_) => Stream.value(SearchInitial()));
 
       await tester.pumpWidget(createWidgetUnderMain(const SearchPageView()));
 
       await tester.enterText(find.byType(TextField), 'query');
 
-      verify(mockSearchBloc.add(any)).called(1); // One for enterText
+      verify(
+        mockSearchBloc.add(
+          argThat(
+            isA<SearchTextChanged>().having((e) => e.query, 'query', 'query'),
+          ),
+        ),
+      ).called(1);
     });
   });
 }

@@ -31,7 +31,9 @@ void main() {
   }
 
   group('MovieDetailsView', () {
-    testWidgets('renders movie details when state is MovieDetailLoaded', (tester) async {
+    testWidgets('renders movie details when state is MovieDetailLoaded', (
+      tester,
+    ) async {
       final movie = const MovieEntity(
         id: 1,
         title: 'Test Movie',
@@ -43,11 +45,17 @@ void main() {
       );
 
       when(mockMovieDetailBloc.state).thenReturn(MovieDetailLoaded(movie));
-      when(mockMovieDetailBloc.stream).thenAnswer((_) => Stream.value(MovieDetailLoaded(movie)));
+      when(
+        mockMovieDetailBloc.stream,
+      ).thenAnswer((_) => Stream.value(MovieDetailLoaded(movie)));
 
       // Also mock FavoritesBloc for FavoriteMovie widget
-      when(mockFavoritesBloc.state).thenReturn(const FavoritesLoaded(favoriteMovies: []));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])));
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(const FavoritesLoaded(favoriteMovies: []));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])),
+      );
 
       await tester.pumpWidget(createWidgetUnderMain(const MovieDetailsView()));
 
@@ -58,11 +66,17 @@ void main() {
     });
 
     testWidgets('renders nothing when state is not loaded', (tester) async {
-       when(mockMovieDetailBloc.state).thenReturn(MovieDetailInitial());
-      when(mockMovieDetailBloc.stream).thenAnswer((_) => Stream.value(MovieDetailInitial()));
+      when(mockMovieDetailBloc.state).thenReturn(MovieDetailInitial());
+      when(
+        mockMovieDetailBloc.stream,
+      ).thenAnswer((_) => Stream.value(MovieDetailInitial()));
 
-      when(mockFavoritesBloc.state).thenReturn(const FavoritesLoaded(favoriteMovies: []));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])));
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(const FavoritesLoaded(favoriteMovies: []));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])),
+      );
 
       await tester.pumpWidget(createWidgetUnderMain(const MovieDetailsView()));
 

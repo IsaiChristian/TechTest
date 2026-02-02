@@ -26,8 +26,12 @@ void main() {
 
   group('FavoritesPage', () {
     testWidgets('renders FavoritesPageView when loaded', (tester) async {
-      when(mockFavoritesBloc.state).thenReturn(const FavoritesLoaded(favoriteMovies: []));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])));
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(const FavoritesLoaded(favoriteMovies: []));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])),
+      );
 
       await tester.pumpWidget(createWidgetUnderMain(const FavoritesPage()));
 
@@ -36,17 +40,28 @@ void main() {
   });
 
   group('FavoritesPageView', () {
-    testWidgets('shows empty message when favorites list is empty', (tester) async {
-       when(mockFavoritesBloc.state).thenReturn(const FavoritesLoaded(favoriteMovies: []));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])));
+    testWidgets('shows empty message when favorites list is empty', (
+      tester,
+    ) async {
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(const FavoritesLoaded(favoriteMovies: []));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(const FavoritesLoaded(favoriteMovies: [])),
+      );
 
       await tester.pumpWidget(createWidgetUnderMain(const FavoritesPageView()));
 
-      expect(find.text('No favorite movies yet. Start adding some!'), findsOneWidget);
+      expect(
+        find.text('No favorite movies yet. Start adding some!'),
+        findsOneWidget,
+      );
       expect(find.byType(TtMovieGrid), findsOneWidget);
     });
 
-    testWidgets('shows list of movies when favorites list is not empty', (tester) async {
+    testWidgets('shows list of movies when favorites list is not empty', (
+      tester,
+    ) async {
       final List<MovieEntity> movies = [
         const MovieEntity(
           id: 1,
@@ -56,30 +71,48 @@ void main() {
           releaseDate: '2023-01-01',
           rating: 8.0,
           genres: [],
-        )
+        ),
       ];
-       when(mockFavoritesBloc.state).thenReturn(FavoritesLoaded(favoriteMovies: movies));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(FavoritesLoaded(favoriteMovies: movies)));
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(FavoritesLoaded(favoriteMovies: movies));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(FavoritesLoaded(favoriteMovies: movies)),
+      );
 
       await tester.pumpWidget(createWidgetUnderMain(const FavoritesPageView()));
 
-      expect(find.text('No favorite movies yet. Start adding some!'), findsNothing);
+      expect(
+        find.text('No favorite movies yet. Start adding some!'),
+        findsNothing,
+      );
       expect(find.byType(TtMovieGrid), findsOneWidget);
       expect(find.text('Test Movie'), findsOneWidget);
     });
 
-    testWidgets('shows error message when state is FavoritesError', (tester) async {
-       when(mockFavoritesBloc.state).thenReturn(const FavoritesError(message: 'Error message'));
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(const FavoritesError(message: 'Error message')));
+    testWidgets('shows error message when state is FavoritesError', (
+      tester,
+    ) async {
+      when(
+        mockFavoritesBloc.state,
+      ).thenReturn(const FavoritesError(message: 'Error message'));
+      when(mockFavoritesBloc.stream).thenAnswer(
+        (_) => Stream.value(const FavoritesError(message: 'Error message')),
+      );
 
       await tester.pumpWidget(createWidgetUnderMain(const FavoritesPageView()));
 
-      expect(find.text('An error occurred. Please try again later.'), findsOneWidget);
+      expect(
+        find.text('An error occurred. Please try again later.'),
+        findsOneWidget,
+      );
     });
 
     testWidgets('renders SizedBox when state is Initial', (tester) async {
-       when(mockFavoritesBloc.state).thenReturn(FavoritesInitial());
-      when(mockFavoritesBloc.stream).thenAnswer((_) => Stream.value(FavoritesInitial()));
+      when(mockFavoritesBloc.state).thenReturn(FavoritesInitial());
+      when(
+        mockFavoritesBloc.stream,
+      ).thenAnswer((_) => Stream.value(FavoritesInitial()));
 
       await tester.pumpWidget(createWidgetUnderMain(const FavoritesPageView()));
 

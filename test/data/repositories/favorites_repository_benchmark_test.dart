@@ -2,7 +2,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:tech_proof/data/repositories/favorites_repository_impl.dart';
 import 'package:tech_proof/domain/entities/movie_entity.dart';
-import 'package:dartz/dartz.dart';
 
 import '../../mocks.mocks.mocks.dart';
 

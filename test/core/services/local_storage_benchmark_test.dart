@@ -45,6 +45,7 @@ void main() {
     stopwatch.stop();
 
     expect(result.length, itemCount);
+    // ignore: avoid_print
     print('Time taken to parse $itemCount items: ${stopwatch.elapsedMilliseconds}ms');
   });
 }

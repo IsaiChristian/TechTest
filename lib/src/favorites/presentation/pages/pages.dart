@@ -38,7 +38,7 @@ class FavoritesPageView extends StatelessWidget {
           children: [
              
             Padding(
-              padding: const EdgeInsets.all(24),
+              padding: .all(24),
               child: 
               
               

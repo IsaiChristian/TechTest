@@ -41,7 +41,7 @@ class MovieDetailsView extends StatelessWidget {
     body: Stack(
       children: [
         Positioned.fill(
-          child: CachedNetworkImage(imageUrl: 'https://image.tmdb.org/t/p/w500${state.movieDetail.posterPath}', fit: BoxFit.fitHeight,)
+          child: CachedNetworkImage(imageUrl: 'https://image.tmdb.org/t/p/w500${state.movieDetail.posterPath}', fit: .fitHeight,)
         ),
         Positioned.fill(
           top: 200,
@@ -51,22 +51,22 @@ class MovieDetailsView extends StatelessWidget {
           
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+              padding: .symmetric(horizontal: 16, vertical: 24),
               child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: .max,
+                crossAxisAlignment: .start,
                 children: [
                   Wrap(
                     spacing: 8.0, 
                     runSpacing: 4.0, 
                     children: state.movieDetail.genres.map((tag) => _buildTagChip(tag)).toList(),
                   ),                  
-                  Text(state.movieDetail.title, style: TextStyle(fontSize: 44, fontWeight: FontWeight.bold, color: Colors.white), textAlign: TextAlign.left,),
-                  Text('Release Date: ${state.movieDetail.releaseDate}', style: TextStyle(fontSize: 16, color: Colors.white), textAlign: TextAlign.left,),
+                  Text(state.movieDetail.title, style: TextStyle(fontSize: 44, fontWeight: FontWeight.bold, color: Colors.white), textAlign: .left,),
+                  Text('Release Date: ${state.movieDetail.releaseDate}', style: TextStyle(fontSize: 16, color: Colors.white), textAlign: .left,),
                   SizedBox(height: 8,),
-                  Text(state.movieDetail.synopsis, style: TextStyle(fontSize: 16, color: Colors.white70), textAlign: TextAlign.left,),
+                  Text(state.movieDetail.synopsis, style: TextStyle(fontSize: 16, color: Colors.white70), textAlign: .left,),
                   SizedBox(height: 16,),
-                  Text('Rating: ${state.movieDetail.rating}/10', style: TextStyle(fontSize: 16, color: Colors.white), textAlign: TextAlign.left,),
+                  Text('Rating: ${state.movieDetail.rating}/10', style: TextStyle(fontSize: 16, color: Colors.white), textAlign: .left,),
                   SizedBox(height: 16,),
                   
               

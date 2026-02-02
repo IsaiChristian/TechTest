@@ -44,6 +44,39 @@ void main() {
       expect(result.length, 1);
       expect(result.first.id, tMovieModel.id);
     });
+
+    test('fromJson should return a valid model', () {
+      final Map<String, dynamic> jsonMap = {
+        'adult': false,
+        'backdrop_path': 'backdropPath',
+        'genre_ids': [1, 2],
+        'id': 1,
+        'original_language': 'en',
+        'original_title': 'Original Title',
+        'overview': 'Overview',
+        'popularity': 10.0,
+        'poster_path': 'posterPath',
+        'release_date': '2023-01-01',
+        'title': 'Title',
+        'video': false,
+        'vote_average': 8.0,
+        'vote_count': 100,
+      };
+
+      final result = MovieModel.fromJson(jsonMap);
+
+      expect(result, isA<MovieModel>());
+      expect(result.id, 1);
+      expect(result.title, 'Title');
+    });
+
+    test('toJson should return a JSON map', () {
+      final result = tMovieModel.toJson();
+
+      expect(result, isA<Map<String, dynamic>>());
+      expect(result['id'], 1);
+      expect(result['title'], 'Title');
+    });
   });
 
   group('MovieDetailMapper', () {

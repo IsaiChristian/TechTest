@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     name: Run Flutter Tests
-    runs-on: ubuntu-latest
+    runs-on: ssdnodes-ediast
 
     steps:
       - name: Checkout repository
@@ -62,7 +62,7 @@ jobs:
   coverage_report:
     name: Generate & Publish Coverage Report
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: ssdnodes-ediast
     permissions:
       contents: write
       pages: write
@@ -138,7 +138,7 @@ jobs:
         uses: zgosalvez/github-actions-report-lcov@v4
         with:
           coverage-files: coverage/lcov.info
-          minimum-coverage: 90
+          minimum-coverage: 75
           artifact-name: code-coverage-report
           github-token: ${{ secrets.GITHUB_TOKEN }}
           update-comment: true

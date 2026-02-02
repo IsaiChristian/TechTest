@@ -116,7 +116,7 @@ class _SearchPageViewState extends State<SearchPageView> {
                           bottom: 0,
                           child: Center(
                             child: TtLoadingLogo(
-                              duration: Duration(microseconds: 1500),
+                              duration: Duration(milliseconds: 1500),
                             ),
                           ),
                         ),

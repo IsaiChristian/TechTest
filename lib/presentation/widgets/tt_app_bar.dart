@@ -13,7 +13,7 @@ class TtAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Column(
           children: [
             SvgPicture.asset('assets/images/tt_ico.svg', height: 32),
-            if(title != null) Text( title!, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white), textAlign: .left,),
+            if(title != null) Text( title!, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white), textAlign: TextAlign.left,),
           ],
         ),
       ),

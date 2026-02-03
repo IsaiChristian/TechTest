@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class JsonConvertible {
@@ -12,6 +13,7 @@ class LocalStorageService {
   static SharedPreferences? _preferences;
 
   static Future<void> init() async {
+    if (_preferences != null) return;
     _preferences = await SharedPreferences.getInstance();
   }
 
@@ -49,11 +51,17 @@ class LocalStorageService {
       return [];
     }
 
-    return jsonStringList
-        .map(
-          (jsonString) =>
-              fromJson(jsonDecode(jsonString) as Map<String, dynamic>),
-        )
+    final List<dynamic> jsonDynamicList = await compute(
+      _decodeJsonList,
+      jsonStringList,
+    );
+
+    return jsonDynamicList
+        .map((jsonMap) => fromJson(jsonMap as Map<String, dynamic>))
         .toList();
+  }
+
+  static List<dynamic> _decodeJsonList(List<String> jsonStringList) {
+    return jsonStringList.map((jsonString) => jsonDecode(jsonString)).toList();
   }
 }

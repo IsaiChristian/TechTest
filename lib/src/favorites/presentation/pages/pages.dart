@@ -30,24 +30,30 @@ class FavoritesPageView extends StatelessWidget {
       appBar: TtAppBar(
         title: 'Favorite Movies',
       ),
-      body: SingleChildScrollView(
-                         
-
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-             
-            Padding(
-              padding: .all(24),
-              child: 
-              
-              
-             TtMovieGrid(movieList: currentState.favoriteMovies),        
+      body: CustomScrollView(
+        slivers: [
+          SliverPadding(
+            padding: EdgeInsets.all(24.0),
+            sliver: TtMovieGrid(movieList: currentState.favoriteMovies),
+          ),
+          if (currentState.favoriteMovies.isEmpty)
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 24.0),
+                child: Center(
+                  child: Text(
+                    'No favorite movies yet. Start adding some!',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
             ),
-            if (currentState.favoriteMovies.isEmpty)
-                  Center(child: Text('No favorite movies yet. Start adding some!', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white), textAlign: TextAlign.center,)),
-          ],
-        ),
+        ],
       ),
     );
   }

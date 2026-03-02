@@ -74,25 +74,22 @@ class _HomePageViewState extends State<HomePageView> {
       appBar: TtAppBar(
         title: 'Popular Movies',
       ),
-      body: SingleChildScrollView(
+      body: CustomScrollView(
         key: ValueKey('home_scroll_view'),
         controller: _scrollController,
-        child: Padding(
-          padding: const .all(24.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              
-          
-              TtMovieGrid(movieList: currentState.movies),
-              if (currentState.isLoadingMore)
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: TtLoadingLogo(),
-                ),
-            ],
+        slivers: [
+          SliverPadding(
+            padding: const EdgeInsets.all(24.0),
+            sliver: TtMovieGrid(movieList: currentState.movies),
           ),
-        ),
+          if (currentState.isLoadingMore)
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TtLoadingLogo(),
+              ),
+            ),
+        ],
       ),
     );
   }

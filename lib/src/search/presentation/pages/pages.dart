@@ -103,8 +103,13 @@ class _SearchPageViewState extends State<SearchPageView> {
                           left: 0,
                           right: 0,
                           bottom: 0,
-                          child: SingleChildScrollView(
-                            child: TtMovieGrid(movieList: state.movies),
+                          child: CustomScrollView(
+                            slivers: [
+                              SliverPadding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                                sliver: TtMovieGrid(movieList: state.movies),
+                              ),
+                            ],
                           ),
                         ),
 

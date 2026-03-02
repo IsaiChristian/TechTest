@@ -56,7 +56,13 @@ void main() {
 
       await tester.pumpWidget(
         MaterialApp(
-          home: Scaffold(body: TtMovieGrid(movieList: tMovies)),
+          home: Scaffold(
+            body: CustomScrollView(
+              slivers: [
+                TtMovieGrid(movieList: tMovies),
+              ],
+            ),
+          ),
         ),
       );
 

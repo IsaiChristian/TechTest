@@ -14,17 +14,16 @@ class TtMovieGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  return GridView.builder(
-          shrinkWrap: true, 
-          physics: NeverScrollableScrollPhysics(), 
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, 
-          crossAxisSpacing: 16,
-          mainAxisSpacing: 16,
-          childAspectRatio: 0.7,
-      ), 
-        itemCount: movieList.length , 
-        itemBuilder: (context, index) {
+    return SliverGrid(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 16,
+        mainAxisSpacing: 16,
+        childAspectRatio: 0.7,
+      ),
+      delegate: SliverChildBuilderDelegate(
+        childCount: movieList.length,
+        (context, index) {
       
         return GestureDetector(
           onTap: () {
@@ -77,6 +76,7 @@ class TtMovieGrid extends StatelessWidget {
           ),
         );
       },
+      ),
     );
   }
 }

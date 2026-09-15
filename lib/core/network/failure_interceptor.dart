@@ -1,6 +1,6 @@
-import 'package:tech_proof/core/error/error_mapper.dart';
-import 'package:tech_proof/core/error/global_error_bus.dart';
-import 'package:tech_proof/core/error/logger_service.dart';
+import 'package:closer_to_god/core/error/error_mapper.dart';
+import 'package:closer_to_god/core/error/global_error_bus.dart';
+import 'package:closer_to_god/core/error/logger_service.dart';
 import 'package:dio/dio.dart';
 
 class FailureInterceptor extends Interceptor {

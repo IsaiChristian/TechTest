@@ -1,4 +1,4 @@
-import 'package:tech_proof/core/error/failure.dart';
+import 'package:closer_to_god/core/error/failure.dart';
 import 'package:dio/dio.dart';
 
 Failure mapDioException(DioException e) {

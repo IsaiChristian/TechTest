@@ -1,5 +1,5 @@
-import 'package:tech_proof/core/error/global_error_bus.dart';
-import 'package:tech_proof/core/network/failure_interceptor.dart';
+import 'package:closer_to_god/core/error/global_error_bus.dart';
+import 'package:closer_to_god/core/network/failure_interceptor.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 

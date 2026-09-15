@@ -1,5 +1,5 @@
-name: tech_proof
-description: "A new Flutter project from Christian Isai"
+name: closer_to_god
+description: "CloserToGod - Daily Prayer Alarm & Reminders"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -47,6 +47,10 @@ dependencies:
   bloc_event_transformers: ^2.0.0
   cached_network_image: ^3.4.1
   bloc_concurrency: ^0.3.0
+  flutter_local_notifications: ^17.2.4
+  timezone: ^0.9.4
+  permission_handler: ^11.3.1
+  record: ^5.2.0
   
   
 
@@ -54,7 +58,7 @@ dev_dependencies:
   bloc_test: ^10.0.0
   flutter_test:
     sdk: flutter
-  mockito: 5.4.4
+  mockito: ^5.4.4
   build_runner: ^2.4.8
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

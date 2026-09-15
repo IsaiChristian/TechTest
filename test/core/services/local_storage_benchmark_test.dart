@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:tech_proof/core/services/local_storage_service.dart';
+import 'package:closer_to_god/core/services/local_storage_service.dart';
 
 // Mock entity for testing
 class TestEntity implements JsonConvertible {

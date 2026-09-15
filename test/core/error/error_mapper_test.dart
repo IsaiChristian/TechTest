@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tech_proof/core/error/error_mapper.dart';
-import 'package:tech_proof/core/error/failure.dart';
+import 'package:closer_to_god/core/error/error_mapper.dart';
+import 'package:closer_to_god/core/error/failure.dart';
 
 void main() {
   group('mapDioException', () {

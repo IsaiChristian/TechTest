@@ -1,5 +1,5 @@
-import 'package:tech_proof/core/error/failure.dart';
-import 'package:tech_proof/core/error/logger_service.dart';
+import 'package:closer_to_god/core/error/failure.dart';
+import 'package:closer_to_god/core/error/logger_service.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 

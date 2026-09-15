@@ -1,7 +1,7 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tech_proof/core/error/global_error_bus.dart';
-import 'package:tech_proof/src/app/bloc/app_bloc.dart';
+import 'package:closer_to_god/core/error/global_error_bus.dart';
+import 'package:closer_to_god/src/app/bloc/app_bloc.dart';
 
 void main() {
   late AppBloc appBloc;

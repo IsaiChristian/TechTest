@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:tech_proof/core/error/global_error_bus.dart';
+import 'package:closer_to_god/core/error/global_error_bus.dart';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

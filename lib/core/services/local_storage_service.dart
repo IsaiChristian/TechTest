@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -17,35 +16,63 @@ class LocalStorageService {
     _preferences = await SharedPreferences.getInstance();
   }
 
-  Future<bool> setString(String key, String value) async {
-    return _preferences!.setString(key, value);
+  Future<SharedPreferences> get _prefs async {
+    if (_preferences == null) {
+      await init();
+    }
+    return _preferences!;
   }
 
-  String? getString(String key) {
-    return _preferences!.getString(key);
+  Future<bool> setString(String key, String value) async {
+    final prefs = await _prefs;
+    return prefs.setString(key, value);
+  }
+
+  Future<String?> getString(String key) async {
+    final prefs = await _prefs;
+    return prefs.getString(key);
+  }
+
+  Future<bool> setStringList(String key, List<String> value) async {
+    final prefs = await _prefs;
+    return prefs.setStringList(key, value);
+  }
+
+  Future<List<String>?> getStringList(String key) async {
+    final prefs = await _prefs;
+    return prefs.getStringList(key);
+  }
+
+  Future<bool> setBool(String key, bool value) async {
+    final prefs = await _prefs;
+    return prefs.setBool(key, value);
+  }
+
+  Future<bool?> getBool(String key) async {
+    final prefs = await _prefs;
+    return prefs.getBool(key);
   }
 
   Future<bool> remove(String key) async {
-    return _preferences!.remove(key);
+    final prefs = await _prefs;
+    return prefs.remove(key);
   }
 
   Future<bool> setJsonList<T extends JsonConvertible>(
     String key,
     List<T> list,
   ) async {
-    await init();
     final List<String> jsonStringList = list
         .map((item) => jsonEncode(item.toJson()))
         .toList();
-    return _preferences!.setStringList(key, jsonStringList);
+    return setStringList(key, jsonStringList);
   }
 
   Future<List<T>> getJsonList<T extends JsonConvertible>(
     String key,
     FromJsonFactory<T> fromJson,
   ) async {
-    await init();
-    final List<String>? jsonStringList = _preferences!.getStringList(key);
+    final List<String>? jsonStringList = await getStringList(key);
 
     if (jsonStringList == null) {
       return [];

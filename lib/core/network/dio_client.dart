@@ -1,4 +1,4 @@
-import 'package:tech_proof/core/network/failure_interceptor.dart';
+import 'package:closer_to_god/core/network/failure_interceptor.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -10,10 +10,10 @@ class DioClient {
   DioClient({String? apiKey}) {
     _dio = Dio(
       BaseOptions(
-        baseUrl: 'https://api.themoviedb.org/3/',
-        connectTimeout: Duration(milliseconds: 5000),
-        receiveTimeout: Duration(milliseconds: 5000),
-        queryParameters: {'api_key': apiKey ?? dotenv.env['TMB_API']},
+        baseUrl: 'https://api.closertogod.app/v1/',
+        connectTimeout: const Duration(milliseconds: 5000),
+        receiveTimeout: const Duration(milliseconds: 5000),
+        queryParameters: {'api_key': apiKey ?? dotenv.env['API_KEY'] ?? ''},
       ),
     );
 
